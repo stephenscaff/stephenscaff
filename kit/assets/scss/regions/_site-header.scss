@@ -1,0 +1,62 @@
+//----------------------------------------------
+//  site-header
+//  Our main header element and navigations
+//
+//  @group site-header
+//----------------------------------------------
+.site-header {
+  z-index: 9;
+  position: fixed;
+  display: block;
+  width: 100%;
+  padding: 1em 0;
+  //height: $header-height;
+  //line-height: $header-height;
+  color: $color-white;
+  transition: all 1s ease;
+  
+  &__grid{
+    position: relative;
+    display: flex;
+    align-content: center;
+    margin: 0 auto;
+    width: $grid-max-width-xl;
+    max-width: $grid-max-width-xl;
+  }
+
+
+//----------------------------------------------
+//  Site-Header__Brand (logo)
+//  Logo link wrap and logo svg.
+//----------------------------------------------
+  &__logo{
+    @include link-styles($color-lighter, $color-white);
+    
+    .icon-shield{
+      font-size: 1.5em;
+    }
+
+    .theme-light &{
+      @include link-styles($color-dark, $color-grey);
+    }
+  }
+
+//----------------------------------------------
+//  Site-Header__Nav
+//----------------------------------------------
+  &__nav{
+    display: flex;
+    margin-left: auto;
+
+    a{
+      @include link-line($line_pos: 50%, $color: $color-light, $line_color: $color-white, $hover_color:$color-white);
+      margin-left: 1em;
+      padding: 0 0.1em;
+      text-transform: lowercase;
+
+      .theme-light &{
+        @include link-line($line_pos: 50%, $color: $color-dark, $line_color: $color-dark, $hover_color:$color-grey);
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+//----------------------------------------------
+//  Next
+//  Next Project or Post patters
+//-----------------------------------------------
+.next{
+
+  &__link{
+    position: relative;
+    display: block;
+    padding:  $pad-xl 0;
+    overflow: hidden;
+    transition: color 1.5s ease, background-color 1.5s ease;
+
+    &:hover{
+      color: #fff;
+      background-color: $color-dark !important;
+      transition: color 1.5s ease, background-color 1.5s ease;
+
+      *{
+        color: #fff;
+      }
+
+      .btn{
+        color: #fff;
+      }
+    }
+
+    .next--post &{
+      background-color: $color-dark;
+      color: #fff;
+    }
+
+    .next--work &{
+      background-color: #fff;
+      color: $color-dark;
+    }
+  }
+
+
+  &__bg{
+    @include bg-img-abs();
+    @include bg_overlay($color-dark, 0.2);
+    transform: scale(1);
+    transition: transform 3.5s ease-in-out;
+
+    .next.has-bg .next__link:hover &{
+      transform: scale(1.2);
+      transition: transform 3.5s ease-in-out;
+    }
+  }
+
+  &__pretitle{
+    display: block;
+    margin: 0 0 1em;
+    @extend %font-pretitle;
+  }
+
+  &__title{
+    position: relative;
+    display: block;
+    margin: 0 0 $mb;
+    overflow:hidden;
+
+    .oh-title, .oh-desc{
+      display: block;
+      overflow-y:hidden;
+
+      .oh{
+        //transition: transform 0.4s ease, opacity 0.3s ease;
+      }
+
+      .oh span{
+        display: inline-block;
+        transition: transform 0.4s ease, opacity 1s ease;
+        @include nth-trans-delay(30, 0.05s);
+      }
+
+    }
+
+    .oh-title{
+
+      .oh span{
+        opacity: 1;
+        transform:translate3d(0,0,0);
+
+        .next__link:hover &{
+          opacity: 0;
+          transform:translate3d(0,-105%,0);
+          @include nth-trans-delay(30, 0.05s);
+        }
+      }
+    }
+
+    .oh-desc{
+      position: absolute;
+      top: 0;
+      .oh span{
+        opacity: 0;
+        //transform:translate3d(0,103%,0);
+
+        .next__link:hover &{
+          opacity: 1;
+          transform:translate3d(0,0,0);
+          @include nth-trans-delay(50, 0.05s);
+        }
+      }
+    }
+  }
+}

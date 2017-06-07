@@ -1,0 +1,92 @@
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.about-mast{
+  background-color: $color-dark;
+  color: $color-white;
+  padding: 12vw 0;
+
+  &__header, &__content{
+    margin-bottom: $mb;
+  }
+
+  &__grid{
+    @include flex-grid(1,2,$pad: 1em);
+  }
+
+  &__contact{
+    display: block;
+    font-size: $font-small;
+    color: $color-light;
+
+    span{
+      color: #fff;
+    }
+  }
+
+  &__content a, &__socials a{
+    @include link-lines($color: $color-light, $line_color: $color-alpha);
+  }
+
+  &__content{
+    opacity: 0;
+
+    .is-loaded &{
+      opacity: 1;
+      transition: 2s ease;
+    }
+  }
+  &__item &__contact{
+    opacity: 0;
+
+    .is-loaded &{
+      opacity: 1;
+      transition: 0.5s 0.5s ease;
+      @include nth-trans-delay(10, 0.1s);
+    }
+  }
+}
+
+
+
+.recognition{
+  padding: $pad 0;
+
+  &__title{
+    margin-bottom: $mb;
+  }
+  &__list{
+    list-style: none;
+    color: #fff;
+
+    a{
+      position: relative;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-small;
+    }
+
+    li{
+      position: relative;
+      padding: 0.75em 0;
+    }
+    li:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color-lightest;
+    }
+        li.is-animated:after{
+          width: 100%;
+          transition: width 0.9s $ease-cb-2;
+        }
+      
+  }
+}

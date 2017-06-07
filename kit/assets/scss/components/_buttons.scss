@@ -1,0 +1,91 @@
+//---------------------------------------------- 
+//  Btn Theme
+//  Button reset theme
+//----------------------------------------------
+%btn-theme{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: all 0.4s $ease-in-sine;
+}
+
+//---------------------------------------------- 
+//  Btn-Draw
+//  Mixin that creates a button that draws out
+// .btn .btn__text span
+//----------------------------------------------
+.btn{
+  @extend %btn-theme;
+  @include link-lines($color: $color-dark, $line_color: $color-alpha, $hover_color: $color-dark);
+}
+
+.btn-white{
+  @extend %btn-theme;
+  @include link-lines($color: #fff, $line_color: #fff, $hover_color: $color-light);
+}
+
+.btn-invert{
+  @extend %btn-theme;
+  @include link-lines($color: $color-dark, $line_color: $color-dark, $hover_color: #fff);
+}
+
+.btn-arrow {
+  @extend %btn-theme;
+  padding: 0em 3em 0em 0;
+  transition: color 0.5s ease-in-out;
+
+  &:hover{
+    //transform: translate3d(0.5em,0,0);
+    transition: color 0.5s ease-in-out;
+
+    &:before{
+      width: 2.9em;
+      right: -0.5em;
+    }
+    &:after{
+      right: -0.5em;
+    }
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0.1em;
+    width: 2em;
+    height: 1px;
+    margin: 0 0 0;
+    background: $color-dark;
+    transition: right .15s linear, width .15s linear, background .15s linear;
+  }
+  &:after {
+    right: 0;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0,0,0,0);
+    border-left-color: $color-dark;
+    border-width: 5px;
+    margin: -4.45px -8px 0 0;
+    transition: right .15s linear,border-color .15s linear;
+  }
+}
+.btn-arrow.btn--dark{
+  color: $color-white;
+
+  &:hover{
+    color: $color-alpha;
+  }
+}

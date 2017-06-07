@@ -1,0 +1,272 @@
+//-----------------------------------------------
+//  Screenshots Wrapper
+//  Browser, Tablet and Phone elements for wrapping screenshots.
+//  @see partials/modules/screenshots-module
+//-----------------------------------------------
+.screenshots{
+  background-color: $color-lightgrey;
+
+  &__grid{
+    display: flex;
+
+    @media (min-width: $mq-med){
+      justify-content: center;
+    }
+
+    & > *{
+      padding: 0.5em;
+      @media (min-width: $mq-med){
+        padding: 2em;
+      }
+    }
+  }
+}
+
+.screenshots.screenshots--browser{
+  .screenshots__grid{
+    flex-wrap: wrap;
+  }
+
+  .screenshots__item{
+    @media (min-width: $mq-med){
+      padding: 1.5em;
+      margin-bottom: -0.75em;
+    }
+  }
+
+   .screenshots__item.js-scroll{
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    &.is-animated{
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+  }
+
+    .screenshot-half{
+      @include flex-col(50%);
+    }
+    .screenshot-full{
+      width: 100%;
+    }
+}
+//-----------------------------------------------
+// Screenshot 
+//-----------------------------------------------
+.screenshot{
+  position: relative;
+  display: block;
+
+  // Screenshot images
+  img{
+    @include img-crisper();
+    display: block;
+    width: 100%;
+  }
+
+  // Caption that appears under device
+  &__caption{
+    margin: 1em auto;
+    font-size: $font-xxsmall;
+    text-align: center;
+    color: $color-grey;
+  }
+  .screenshots--browser & .has-bg{
+    display: block;
+    padding: 3.5vw;
+  }
+}
+
+//----------------------------------------------- 
+// Browser
+// image wrapper that creates a css browser
+// @example:
+// <figure class="screenshot">
+//   <div class="screenshot__browser">
+//   <span class="browser__dot"></span>
+//   <img/>
+//   </div>
+//   <figcpation>
+// </figure>
+//-----------------------------------------------
+.screenshot__browser {
+  position: relative;
+  padding: 2rem 0 0;
+  background: $color-white;
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 0.4rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.02), 0px 4px 16px rgba(0,0,0,0.05);
+
+  .has-bg &{
+    box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.02), 0px 8px 53px 7px rgba(0,0,0,0.09);
+  }
+
+  // Browser Dots
+  .browser-dot, .browser-dot:before, .browser-dot:after{
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+  }
+
+  .browser-dot{
+    left: 1.25rem;
+    top: 0.8rem;
+  }
+  .browser-dot:after, .browser-dot:before {
+    content: '';
+    top: 0em;
+  }
+  .browser-dot:before{
+    right: 10px;
+  }
+  .browser-dot:after{
+    left: 0.5em;
+  }
+}
+
+//-----------------------------------------------
+// Screenshot Tablet
+// Image wrapper that creates a css tablet
+//
+// @example:
+// <figure class="screenshot__tablet">
+//  <div class="screenshot__scroll">
+//   <img/>
+//  </div>
+// </figure>
+//-----------------------------------------------
+.screenshot__tablet{
+  position: relative;
+  padding: 1.5em 3.5em;
+  background: $color-white;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 1.5em;
+  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.02), 0px 4px 16px rgba(0,0,0,0.05);
+  font-size: 65%;
+  
+  @media (min-width: $mq-small){
+    font-size: 100%;
+  }
+  // Speaker
+  &:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.5em;
+    width: 0.45em;
+    height: 0.45em;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.1);
+    border-radius: 0.3rem;
+  }
+  // Home Button
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0.65em;
+    right: 0.95em;
+    top: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 auto;
+    background: $color-white;
+    border: 3px solid rgba(0,0,0,0.1);
+    border-radius: 100%;
+  }
+
+  // Scroll Wrapper
+  .screenshot__scroll{
+    max-height: 18em;
+    overflow: scroll;
+
+    @media (min-width: $mq-small){
+      max-height: 31em;
+    }
+
+    //Ideally hide scrollbar
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+//-----------------------------------------------
+// iPhone
+// image wrapper that creates a css iphone
+//
+// @example:
+// <figure class="screenshot__phone">
+//  <div class="screenshot__scroll">
+//   <img/>
+//  </div>
+// </figure>
+//-----------------------------------------------
+
+// Section container modifier
+// Enables left to rgiht overflow scrollin on mobile.
+// Not sure if this will get all jank.
+.screenshots--phone{
+  @media (max-width: $mq-med){
+    overflow-x: auto;
+    margin-bottom: -2em;
+  }
+
+  .screenshots__item{
+    min-width: 17em;
+  }
+}
+
+.screenshot__phone{
+  position: relative;
+  max-width: 13.5em;
+  padding: 3em 0.5em;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 2em;
+  box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.02), 0px 4px 16px rgba(0,0,0,0.05);
+  
+  // Speaker
+  &:before{
+    content: '';
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    width: 1.75em;
+    height: 0.25em;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.1);
+    border-radius: 0.3rem;
+  }
+  
+  // Home Button
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0.8em;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 auto;
+    background: $color-white;
+    border-radius: 100%;
+    border: 3px solid rgba(0,0,0,0.1);
+  }
+
+  // Scroll Wrapper
+  .screenshot__scroll{
+    max-height: 21.25em;
+    overflow: scroll;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+

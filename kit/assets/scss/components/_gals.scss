@@ -1,0 +1,59 @@
+//----------------------------------------------
+//  Gal
+//  Styles for the gallery module, that offers
+//  a series of images at full or half width.
+//
+//  @group gal
+//-----------------------------------------------
+
+$gal-pad: 0.75em;
+
+.gal{
+  padding: $gal-pad 0;
+  background-color: $color-lightgrey;
+  
+  // Grid for padding offsets (neg margins)
+  &__grid{
+    margin-left: -$gal-pad / 2;
+    margin-right: -$gal-pad / 2;
+    @include flex-row($wrap: wrap);
+    
+    @media (min-width: $mq-med){
+      margin-left: -$gal-pad;
+      margin-right: -$gal-pad;
+    }
+  }
+
+  // Gal Items / Images
+  &__item{
+    width: 100%;
+    padding: $gal-pad / 2;
+
+    @media (min-width: $mq-med){
+      padding: 0.5em $gal-pad;
+    }
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+  }
+
+  // Gal Half width Helper
+  .gal-half{
+    @include flex-col(50%);
+  }
+
+  .has-shadow{
+   
+   img{
+      background-clip: padding-box;
+      box-shadow: 0 0 58px -9px rgba(0,0,0,0.125);
+    }
+  }
+
+  span.has-bg{
+    display: block;
+    padding: 2.5em;
+  }
+}  

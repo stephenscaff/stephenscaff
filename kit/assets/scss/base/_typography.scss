@@ -1,0 +1,192 @@
+//----------------------------------------------
+// Typography
+//----------------------------------------------
+body {
+  font-family: $font-sans;
+  line-height: $base-lineheight;
+  color: $color-dark;
+  background-color: #fff;
+}
+
+//----------------------------------------------
+// Fluid body sizing
+//----------------------------------------------
+body {
+  font-size: 100%;
+  
+  @media (min-width: $mq-small) {
+    font-size: 102%;
+  }
+  @media (min-width: $mq-med) {
+    font-size: 103%;
+  }
+  @media (min-width: $mq-large) {
+    font-size: 107%;
+  }
+  @media (min-width: 75em) {
+    font-size: 110%;
+  }
+  @media (min-width: $mq-xlarge) {
+    font-size: 120%;
+  }
+  @media (min-width: $mq-xxlarge) {
+    font-size: 130%;
+  }
+  @media (min-width: $mq-xxxlarge) {
+    font-size: 140%;
+  }
+}
+
+//----------------------------------------------
+//  Headings
+//  @group    typography
+//  @requires {placeholder} %font-h* tools/extends/_extends-type.scss
+//----------------------------------------------
+// h1, h2, h3 {
+//   font-family: $font-serif;
+//   font-weight: 400;
+//   //color: $color-dark;
+// }
+
+
+h1, h2, h3 , h4, h5, h6 {
+  font-family: $font-sans;
+  font-weight: 500;
+  //color: $color-dark;
+}
+
+//----------------------------------------------
+//  h1
+//  @group  typography
+//----------------------------------------------
+%font-h1, 
+h1 {
+  margin-bottom: .25em;
+  font-size: $font-h1;
+  line-height: 1.25;
+  
+  @media (min-width: $mq-xlarge) {
+    font-size: $font-h1 + $font-scale-up;
+  }
+}
+//----------------------------------------------
+//  h2
+//  @group  typography
+//----------------------------------------------
+%font-h2,
+h2 {
+  margin-bottom: .25em;
+  font-size: $font-h2;  
+  line-height: 1.2;
+
+  @media (min-width: $mq-xlarge) {
+    font-size: $font-h2 + $font-scale-up
+  }
+}
+//----------------------------------------------
+//  h3
+//  @group  typography
+//----------------------------------------------
+%font-h3,
+h3 {
+  margin-bottom: .6em;
+  font-size: $font-h3;  
+  line-height: 1.3;
+
+  @media (min-width: $mq-xlarge) {
+    font-size: $font-h3 + $font-scale-up;
+  }
+}
+//----------------------------------------------
+//  h4
+//  @group  typography
+//----------------------------------------------
+%font-h4,
+h4 {
+  margin-bottom: .5em;
+  font-size: $font-h4;;  
+  line-height: 1.4;
+
+  @media (min-width: $mq-xlarge) {
+   font-size: $font-h4 + $font-scale-up;
+  }
+}
+//----------------------------------------------
+//  h5
+//  @group  typography
+//----------------------------------------------
+%font-h5,
+h5 {
+  margin-bottom: .4em;
+  font-size: $font-h5;  
+  line-height: 1.4;
+}
+
+
+//----------------------------------------------
+//  paragraphs
+//  @group typography
+//----------------------------------------------
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+small {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 80%;
+}
+
+b, strong{
+  font-weight: 600;
+}
+
+
+
+//----------------------------------------------
+//  quotes
+//  @group typography
+//----------------------------------------------
+q, blockquote {
+  margin: 1em auto;
+  padding: .5em;
+  font-family: $font-sans;
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: inherit;
+  line-height: 1.5;
+  text-align: center;
+  color: $color-grey;
+
+}
+cite {
+  display: block;
+  font-family:$font-sans;
+  font-size: 0.6rem;
+  font-weight: 600;
+  font-style:normal;
+  text-transform:uppercase;
+  letter-spacing: 0.2em;
+  color: $color-grey;
+
+  @media(min-width:$mq-med){
+    font-size: 1rem;
+  }
+
+  &:before {
+    //content: "\2014 \0020";
+  }
+}
+
+//----------------------------------------------
+//  Selection
+//  @group typography
+//----------------------------------------------
+::selection {
+  color: white;
+  background: $color-alpha;
+  text-shadow: none;
+}
+

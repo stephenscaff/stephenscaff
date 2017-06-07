@@ -1,0 +1,9 @@
+//----------------------------------------------
+//  Links
+//  @see scss/tools/mixins-type
+//  @see components/buttons for button styles
+//----------------------------------------------
+a{
+  @include link-styles($color-dark, $color-midgrey)
+}
+ 

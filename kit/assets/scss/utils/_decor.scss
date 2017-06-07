@@ -1,0 +1,43 @@
+//----------------------------------------------
+//  Seperators
+//----------------------------------------------
+
+%sep,
+.sep{
+  position: relative;
+  border: 0;
+  height: 1px;
+  width: 3em;
+  margin: 1em 0;
+  background-color: $color-dark;
+}
+%sep-center,
+.sep-center{
+  @extend %sep;
+  margin: 1em auto;
+}
+
+//----------------------------------------------
+//  Sep Modifiers
+//----------------------------------------------
+
+.sep--alpha{
+ background-color: $color-alpha;
+}
+.sep--grey{
+  background-color: $color-grey;
+}
+.sep--white{
+  background-color: $color-white;
+}
+
+.oh{
+  display: inline-block;
+  overflow:hidden;
+}
+
+.has-greyscale{
+  img{
+    filter: grayscale(1);
+  }
+}

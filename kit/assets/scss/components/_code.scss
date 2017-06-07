@@ -1,0 +1,173 @@
+
+/*----------------------------------------
+-SYNTAX HIGHLIGHTING
+@description: syntax highlighting via Prisim.js
+
+This build: 
+http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+actionscript+handlebars+json+markdown+jsx+sass+scss
+-----------------------------------------*/
+
+code[class*="language-"], 
+pre[class*="language-"] {
+font-family: $font-mono;
+direction: ltr;
+text-align: left;
+word-spacing: normal;
+tab-size: 4;
+hyphens: none;
+color: $color-white;
+}
+
+.lt-ie9 code[class*="language-"], 
+.lt-ie9 pre[class*="language-"] {
+ color: #a6a6a6;
+}
+
+pre[class*="language-"], :not(pre)>code[class*="language-"] {
+ background: #2B2B2B;
+}
+
+pre[class*="language-"] {
+ padding: 1em;
+ margin: 2.5em auto 3em;
+ overflow: auto;
+ border-radius: 0.333333em;
+}
+
+.no-js  pre {
+  overflow: auto;
+}
+
+figcaption {
+  margin-bottom: 0;
+}
+
+
+
+
+
+code,kbd,pre,samp {
+  font-family:monospace,serif;
+  _font-family:'courier new',monospace;
+  font-size:1em;
+  line-height:1.6
+}
+
+pre code {
+  white-space:-moz-pre-wrap;
+  white-space:pre-wrap
+}
+
+pre {
+  white-space:pre-wrap!important;
+  font-size:.825em;
+  padding:1.65rem;
+  margin:0 0 1.5em;
+  background:#021321;
+  box-shadow:0 0 1px rgba(255,255,255,0.75);
+  border-radius:4px;
+  position:relative
+}
+
+code {
+  color:#cdcdcd;
+  white-space:pre!important;
+  font-family:monospace
+}
+
+code[class*="language-"],pre[class*="language-"] {
+  font-family:Monaco,'Andale Mono',monospace;
+  direction:ltr;
+  text-align:left;
+  word-spacing:normal;
+  -moz-tab-size:4;
+  -o-tab-size:4;
+  tab-size:4;
+  -webkit-hyphens:none;
+  -moz-hyphens:none;
+  -ms-hyphens:none;
+  hyphens:none
+}
+
+.lt-ie9 code[class*="language-"],.lt-ie9 pre[class*="language-"] {
+  color:#a6a6a6
+}
+
+pre[class*="language-"],pre[class*="language-"]:not(pre) > code[class*="language-"] {
+  background:#021321
+}
+
+pre[class*="language-"] {
+  padding:1.5em;
+  overflow:auto;
+  border-radius:.333333em;
+  box-shadow:1px 1px .5em #000 inset
+}
+
+.no-js pre {
+  overflow:auto
+}
+
+figcaption {
+  margin-bottom:0
+}
+
+abbr {
+  font-variant:small-caps;
+  font-weight:600;
+  text-transform:lowercase;
+  color:#cdcdcd
+}
+
+.token.property,.token.tag,.token.boolean,.token.number {
+  color:#3caeca
+}
+
+.token.comment,.token.prolog,.token.doctype,.token.cdata {
+  color:#444
+}
+
+.token.punctuation {
+  color:#999
+}
+
+.namespace {
+  opacity:.7
+}
+
+.token.property,.token.tag,.token.boolean,.token.number {
+  color:#3caeca
+}
+
+.token.selector,.token.attr-name,.token.string {
+  color:#E9134F
+}
+
+.token.operator,.token.entity,.token.url,.language-css
+.token.string,.style .token.string {
+  color:#FFF
+}
+
+.token.atrule,.token.attr-value,.token.keyword {
+  color:#3caeca
+}
+
+.token.regex,.token.important {
+  color:#e90
+}
+
+.language-scss .token.variable {
+  color:#A78F8F
+}
+
+.language-scss .token.statement {
+  color:#FF1000
+}
+
+.token.important {
+  font-weight:600
+}
+
+.token.entity {
+  cursor:help
+}

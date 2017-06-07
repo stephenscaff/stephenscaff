@@ -1,0 +1,73 @@
+//----------------------------------------------
+//  Page Transitions
+//  Interactions on page out and page in.
+//  Via js, we're adding an 'is-exiting' class
+//  on page out, and on page in, we're adding
+//  an 'is-loading' class, followed by 'is-loaded'.
+//
+//  @see js/components/_page-transitions.js
+//----------------------------------------------
+html, body{
+  background-color: $color-dark;
+}
+main{
+  background-color: $color-lightgrey;
+}
+
+.theme-dark{
+  main{
+    background-color: $color-dark;
+  }
+}
+
+
+//----------------------------------------------
+//  Is Exiting Page
+//----------------------------------------------
+
+.is-exiting{
+
+  // Footer, when and if we rock one
+  main, .site-footer{  
+    animation: fade-out 1s 0.5s ease both;
+    //opacity: 0;
+    //transition: 0.5s 0.5s ease-in-out;
+  }
+
+  // Sequentially fade shit out., 
+  article * + *,
+  .work-promo__item * + *,
+  .about-mast * + *,
+  .post, 
+  .work-feed,
+  .content p,
+  .gal .gal__img{
+    animation: fade-out 0.5s ease both;
+    @include nth-ani-delay(10, 0.1s);
+  }
+
+  // More Posts
+  .more-posts{
+    animation: fade-out 0.5s 0.5s ease both;
+  }
+}
+
+
+//----------------------------------------------
+//  Is Loading
+//  Interactions on page out and page in.
+//  Via js, we're adding an 'is-exiting' class
+//  on page out, and on page in, we're adding
+//  an 'is-loading' class, followed by 'is-loaded'.
+//
+//  @see js/components/_page-transitions.js
+//----------------------------------------------
+
+main{
+  opacity: 0;
+
+  .is-loaded &{
+    opacity: 1;
+    transition: opacity 2s 0.1s ease;
+  }
+}

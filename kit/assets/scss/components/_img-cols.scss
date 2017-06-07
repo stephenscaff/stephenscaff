@@ -1,0 +1,33 @@
+//----------------------------------------------
+// Image Cols
+//-----------------------------------------------
+
+.img-cols{
+  padding: $pad-lg 0;
+
+  &__grid{
+    @include flex-row($align:center, $wrap:no-wrap);
+  }
+
+  &__figure:first-child{
+    @media (min-width: $mq-med){
+      padding-right: 6vw;
+    }
+     @media (min-width: $mq-xlarge){
+      padding-right: 5vw;
+    }
+  }
+  &__figure:last-child{
+    @media (min-width: $mq-med){
+      padding-left: 6vw;
+    }
+    @media (min-width: $mq-xlarge){
+      padding-right: 5vw;
+    }
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+  }
+}

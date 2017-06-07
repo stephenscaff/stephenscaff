@@ -1,0 +1,68 @@
+//----------------------------------------------
+//Inputs
+//----------------------------------------------
+input, textarea, select {
+  display: block;
+  width: 100%;
+  padding: 0.95em 0.5em 1em;
+  font-family: $font-sans;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: $color-dark;
+  background: $color-white;
+  border: $form-borderwidth solid $form-bordercolor;
+  border-radius: $base-borderradius;
+  box-shadow: none;
+  outline: 0;
+  transition: all .25s ease-in;
+  -webkit-appearance: none;
+
+ 
+  &:focus {
+    border-color: $color-alpha;
+  }
+}
+
+.field--minimal{
+  border: 0;
+  border-bottom: $form-borderwidth solid $form-bordercolor;
+}
+//----------------------------------------------
+//  Labels
+//----------------------------------------------
+label {
+  display: inline;
+  font-family: $font-sans;
+  font-size: 1em;
+}
+
+//----------------------------------------------
+// Input Grouping
+//----------------------------------------------
+.input-group {
+  margin: 1em auto;
+  display: flex;
+
+  input:first-child{
+    border-right: 0;
+  }
+  &__btn{
+    flex-basis: 15%;
+  }
+  input[type="submit"]{
+  }
+}
+//----------------------------------------------
+//  Placeholders
+//----------------------------------------------
+::placeholder {
+  color: $form-placeholdercolor;
+}
+
+//----------------------------------------------
+//  Misc
+//----------------------------------------------
+fieldset {
+  margin: 1em 0;
+}
+

@@ -1,0 +1,68 @@
+//----------------------------------------------
+//  Site Footer
+//
+//  Styles for the global site footer.
+//
+//  @group site-footer
+//-----------------------------------------------
+.site-footer {
+  z-index: 5;
+  position: relative;
+  padding: $pad-lg 0;
+  text-align: center;
+  background: $color-dark;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  
+  &__title{
+    color: $color-white;
+  }
+
+  &__logo{
+    display: block;
+    @include link-styles($color-lighter, $color-alpha);
+
+    i{
+      font-size: 1.5em;
+    }
+  }
+  &__contacts{
+    @include flex-row($mobile:true, $justify:center);
+    padding: 1em 0;
+    
+    a{
+      padding: 0em 1em;
+      margin-bottom: 1em;
+      font-size: $font-xsmall;
+      @include link-styles(rgba(#fff, 0.7), $color-alpha);
+
+      @media (min-width: $mq-med){
+        font-size: $font-base;
+      }
+    }
+  }
+}
+
+// Hide Global Footer sometimes
+.site-footer{
+  .single &{
+    display: none;
+  }
+}
+//----------------------------------------------
+//  Sticky Footer via Flex
+//
+//  Flexbox-based sticky footer for pages with not 
+//  enough content to fill viewport. Might act wierd 
+//  in IE.
+//
+//  @group site-footer
+//-----------------------------------------------
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}

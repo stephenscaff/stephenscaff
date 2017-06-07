@@ -1,0 +1,62 @@
+//---------------------------------------------- 
+//  Post feed / grid                  
+//----------------------------------------------
+.post-mast{
+  padding: 12em 0 $pad-med;
+
+  &__bg{
+    @include bg-img-abs();
+    @include bg-overlay($color-dark, 0.7);
+  }
+
+  &.has-bg{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    @media (min-width: $mq-med){
+      min-height: 100vh;
+    }
+  }
+
+  &__metas{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    max-width: 12em;
+    margin: 0 0 $mb*2;
+    
+    > *:first-child{
+      padding-right: 0.25em;
+    }
+    > *:last-child{
+      padding-left: 0.25em;
+    }
+
+    .has-bg &{
+      margin: 0 auto $mb*2;
+    }
+  }
+
+  &__date, &__cat, &__pretitle{
+    font-size: $font-small;
+    color: currentColor;
+  }
+
+
+  .metas-sep{
+    position: relative;
+    flex: 1;
+    align-self: center;
+    height: 1px;
+    background-color: currentColor;
+  }
+
+  &__title{
+    margin-bottom: $mb/2;
+    color: current3Color;
+  }
+  &__subtitle{
+    font-size: $font-h3;
+  }
+}

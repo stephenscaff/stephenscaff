@@ -1,0 +1,35 @@
+//-------------------------------------------- 
+// BG Color Helpers
+//--------------------------------------------
+
+.bg-white{
+ background-color: $color-white;
+}
+
+.bg-black, .bg-dark, .theme-black{
+ background-color: $color-black;
+
+  *{
+    color: #fff;
+  }
+}
+
+.bg-lightgrey, .theme-grey{
+ background-color: $color-lightgrey;
+}
+
+.bg-alpha{
+  background-color: $color-alpha;
+}
+
+
+//----------------------------------------------
+// Color Themes
+//----------------------------------------------
+.theme-dark{
+  background-color: $color-dark;
+}
+
+.theme-grey{
+  background-color: $color-lightgrey;
+}

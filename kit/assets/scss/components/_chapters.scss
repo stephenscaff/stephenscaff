@@ -1,0 +1,61 @@
+//----------------------------------------------
+//  Chapters
+//
+//  Left right 2 col layout jaun used on home page.
+//-----------------------------------------------
+
+@mixin pseudo-border($width: 100%, $color:$color-light){
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: $width;
+    background-color: $color;
+  }
+}
+
+@mixin chapter(){
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $color-dark;
+
+  &__grid{
+    @include flex-row();
+  }
+
+  &__header, &__content{
+    padding: $pad 0 $pad-sm;
+  }
+
+  &__header{
+    z-index: 7;
+    position: relative;
+    opacity: 0.5;
+    @include flex-col(30%);
+
+    @media (min-width: $mq-med){
+      @include pseudo-border($width:3em);
+      left: -1.15%;
+    }
+  }
+
+  &__content{
+    z-index: 7;
+    position: relative;
+    @include flex-col(70%);
+    @include pseudo-border();
+  }
+
+  &__title{
+    font-family: $font-sans;
+    font-size: $font-xsmall;
+    font-weight: 400;
+    color: $color-light;
+    @extend %font-vert;
+  }
+}

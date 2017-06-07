@@ -1,0 +1,181 @@
+
+
+// Clock Diameter
+$clock-di-sm: 50vmin;
+$pie-di-sm: $clock-di-sm / 1.35;
+$ring-width-sm: 6px;
+
+$clock-di: 50vmin;
+$pie-di: $clock-di / 1.35;
+$ring-width: 0.75vmin;
+$h: 2vmin;  
+
+@keyframes clock-rotate {
+  
+  0%{
+     transform: rotate(0);
+  }
+  50%{
+     transform: rotate(0);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate-clockwise{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise{
+  0%{
+    transform:rotate(0);
+  }
+  100%{
+    transform:rotate(-360deg);
+  }
+}
+
+@keyframes clock-pie-masker {
+  0% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+
+
+.clock {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate3d(-50%,-50%,0);
+  width: $clock-di-sm; 
+  height: $clock-di-sm,;
+  //background: #111;
+  border-radius: 50%;
+  overflow:hidden;
+
+  @media (min-width: $mq-med){
+    width: $clock-di; 
+    height: $clock-di;
+  }
+  
+  &__wrap {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate3d(-50%,-50%,0);
+  }  
+  &::after {
+    position: absolute;
+    content: '';
+  }
+
+
+  &__ticks{
+    position: relative;
+    display: block;
+    animation: clock-rotate 3s $ease-cb-2 both infinite;
+  }
+  &__ticks span {  
+    z-index: 99;
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: $h;
+    //transform-origin: 50% 0%;
+    left: calc(50% - #{$h/2});
+    top: 50%;
+
+
+
+    @for $i from 1 through 24 {
+      &:nth-child(#{$i}) {
+        background:#fff;
+        transform: rotate(($i/24) * 360deg) translateX($clock-di-sm/2 - $h);
+
+        @media (min-width: $mq-med){
+          transform: rotate(($i/24) * 360deg) translateX($clock-di/2 - $h);
+        }
+      }
+    }
+  }
+}
+
+
+.clock__rings{
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  //left: 50%;
+  transform: translate3d(100%,-50%,0);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  
+
+  .clock__ring-outside{
+    position: absolute;
+    display:block;
+    height: 6vw;
+    width: 6vw;
+    border-radius: 100%;
+    border: $ring-width solid transparent;
+    border-bottom: $ring-width solid #fff;
+    border-left: $ring-width solid #fff;
+    animation: rotate-counterclockwise 3s linear both infinite;
+  }  
+  .clock__ring-inside{
+    position: relative;
+    height: 4vw;
+    width: 4vw; 
+    border-radius: 100%;
+    border: $ring-width solid transparent;
+    border-bottom: $ring-width solid #fff;
+    border-left: $ring-width solid #fff;    
+    animation: rotate-clockwise 1s linear both infinite;
+  }  
+}
+
+.clock__pie {
+  position: absolute;
+  width: $pie-di-sm;
+  height: $pie-di-sm;
+  transform: translate3d(-50%,-50%,0);
+
+  @media (min-width: $mq-med){
+    width: $pie-di;
+    height: $pie-di;
+  }
+}
+
+.clock__pie-spinner {
+  z-index: 200;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  border-right: none;
+  transform-origin: 100% 50%;
+  animation: rotate-counterclockwise 3s linear infinite;
+}
+
+.clock__pie-mask {
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}

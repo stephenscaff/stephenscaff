@@ -1,0 +1,43 @@
+//----------------------------------------------
+//  site-header
+//  Our main header element and navigations
+//
+//  @group site-header
+//----------------------------------------------
+.work-header{
+  z-index: 91;
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  transform:translate3d(0,-110%,0);
+  transition: transform 0.7s ease;
+
+  .scrolling-down &{
+    transform:translate3d(0,0,0);
+    transition: transform 0.7s ease;
+  }
+
+  .scrolling-up &{
+    transform:translate3d(0,-110%,0);
+    transition: transform 0.7s ease;
+  }
+
+  &__link{
+    display: block;
+    width: 100%;
+    padding: 1.5em 0.5em;
+    background-color: #fff;
+    transition: background-color 1s ease, color 1s ease;
+
+    @media (min-width: $mq-med) {
+      padding: 2em 0.5em;
+    }
+
+    &:hover{
+      background-color: $color-dark;
+      transition: background-color 1s ease, color 1s ease;
+    }
+  }
+}

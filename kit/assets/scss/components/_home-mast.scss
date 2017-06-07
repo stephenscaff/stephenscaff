@@ -1,0 +1,101 @@
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.home-mast{
+  position: relative;
+  display: flex;
+  align-items:center;
+  height: 100vh;
+  color: #fff;
+  background-color: $color-dark;
+
+  &:after{
+    @include pseudo-el(3);
+    position: fixed;
+    //background-image: linear-gradient( to bottom, #000, rgba($color-dark,0.1) 100%); 
+  }
+  
+  // Bg Vid
+  .home-mast__vid-wrap{
+    @include bg-vid($opacity: 1, $reveal-amount: 0.3);
+  }
+ 
+  // __grid & __col for 2 cols layout
+  &__grid{
+    z-index: 4;
+    position: relative;
+    @include flex-row($align:center);
+  }
+
+  &__col{
+    @include flex-col(50%);
+  }
+
+  // For Single Col Layout
+  &__content{
+    z-index: 4;
+    position: relative;
+    margin: 0 auto;
+    @include flex-col(70%);
+
+    @media (min-width: $mq-med){
+      margin-left: 30%;
+    }
+  }
+
+  &__header{
+    z-index: 3;
+    position: relative;
+  }
+
+  &__title{
+    //max-width: 8em;
+    @extend %font-title-caps;
+    @include font-rwd($font-h1, 2.8em, 3em, 3.5em);
+
+    .js-letters span{
+      min-width: 1em;
+
+      @media (min-width: $mq-med){
+        min-width: 1.5em;
+      }
+    }
+  }
+
+  &__text{
+    font-size: 1.1em;
+    font-family: $font-sans;
+    font-size: $font-small;
+    max-width: 34em;
+  }
+
+  &__sep{
+    position: relative;
+    border: 0;
+    height: 0.2em;
+    width: 0;
+    margin: 0 0 3em;
+    background-color: #fff;
+
+    .is-loaded &{
+      width: 6em;
+      transition: 0.5s 1s $ease-cb-2;
+    }
+  }
+
+  &__figure{
+    z-index: 0;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30em;
+    height: 27em;
+    background-color: $color-black;
+    background-position: 50%;
+    background-position: no-repeat;
+  }
+}

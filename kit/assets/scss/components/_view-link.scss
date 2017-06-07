@@ -1,0 +1,36 @@
+//----------------------------------------------
+//  View Project Link
+//-----------------------------------------------
+
+.view-link{
+  
+  &, &__grid{
+    z-index: 91;
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__link{
+    display: block;
+    padding: 1.75em 1em;
+    color: $color-dark;
+  }
+
+  .is-sticky{
+    position: fixed;
+    top:0;
+  }
+
+  &__menu-toggle{
+    position: absolute;
+    top: 1.75em;
+    right: 1.75em;
+    @extend .site-header__menu-toggle;
+  }
+
+  &__menu-bars{
+    @extend .site-header__menu-bars;
+  }
+}
+

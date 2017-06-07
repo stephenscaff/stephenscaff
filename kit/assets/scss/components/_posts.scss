@@ -1,0 +1,110 @@
+//---------------------------------------------- 
+//  Post feed / grid                  
+//----------------------------------------------
+.post-feed{
+  &__grid{
+    @include flex-grid(1, 2, $pad: 2em);
+    //@include flex-grid-animation(1, 2, 2, 2);
+  }
+}
+
+//---------------------------------------------- 
+//  Work Single Items
+//----------------------------------------------
+.post{
+  //animation-name: fade-in;
+
+  &__link{
+    min-width: 100%;
+    margin-bottom: $mb * 2;
+  }
+
+  // Image Wrap
+  &__figure{
+    z-index: 4;
+    position: relative;
+    margin-bottom: $mb;
+    overflow:hidden;
+    background: darken($color-dark, 4);
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    @include aspect_ratio(1500, 900 );
+    overflow: hidden;
+
+    .post__link:hover &{
+      transform: scale(.97);
+    }
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    @include img-crisper;
+
+    .post__link:hover &{
+      transform: scale(1.1);
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  // Video Wrap
+  &__vid-wrap{
+    z-index: 5;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    margin-bottom: $mb;
+    padding-bottom: 120%;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    //@include bg_overlay(#111, 0.4);
+
+    .post__link:hover &{
+      transform: scale(.95);
+    }
+  }
+
+  &__vid{
+    z-index: -1;
+    position: absolute;
+    transform: scale(1);
+    width: auto;
+    margin: 0 auto;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit:cover;
+    transition: transform .3s ease-in-out;
+
+    .post__link:hover &{
+      //transform: scale(1.15) translate(-50%,-50%);
+      transform: scale(1.2);
+      transition: transform .3s ease-in-out;
+    }
+  }
+
+  &__title{
+    font-weight: 400;
+    margin-bottom: 0;
+    color: currentColor;
+
+    .theme-dark &{
+      color: $color-white;
+    }
+  }
+
+  &__text{
+    margin: 1em 0 1.5em;
+    font-size: $font-xsmall;
+
+    .theme-dark &{
+      color: $color-light;
+    }
+  }
+}

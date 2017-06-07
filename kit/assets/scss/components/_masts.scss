@@ -1,0 +1,59 @@
+//----------------------------------------------
+//  Mast
+//  Page mastheads
+//
+//  @group mast
+//-----------------------------------------------
+.mast{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  &__bg{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+    animation: fade-in 1s ease-in-out both;
+  }
+  
+  &__title{
+    font-weight: 700;
+  }
+
+  &__title, &__text{
+    display: inline;
+    font-family: $font-sans;
+    font-size: $font-small;
+
+
+    @media (min-width: $mq-med){
+      font-size: $font-h5;
+    }
+  }
+
+
+  // Backgrounds (optional in cms)
+  &__figure{
+    @include bg-img-abs();
+    //@include bg-overlay($color-black, 0.7);
+    animation: fade-in 2s 1s ease-in-out both;
+  }
+
+  &__link{
+    margin-top: $mb;
+    font-size: $font-h5;
+  }
+
+  &.bg-dark{
+    background-color: $color-dark;
+    color: #fff;
+  }
+  &.bg-white{
+    background-color: $color-white;
+    color: $color-dark;
+  }
+}

@@ -1,0 +1,227 @@
+//----------------------------------------------  
+//  flex-grid();
+//  Creates grid blocks via flexbox
+
+//  @param: $xsm, $sm, $med, $lg, $xl - @media sizes
+//  @param: $pad  - item padding  
+//  @useage: @include g-blocks(1, 2, 3, 4, 1%);
+
+//  @note: Can replace universal selector with '& > #{$item}''  ($item:'article')
+//----------------------------------------------
+@mixin flex-grid($xs:null, $sm:null, $med:null, $lg:null, $xl:null, $xxl:null, $pad:0, $align:null) {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  @if $align {
+    align-items: $align;
+  }
+  margin-left: -$pad;
+  margin-right: -$pad;
+
+  & > * {
+    padding:$pad;
+    flex-basis: 100%/$xs;
+    max-width: 100%/$xs;
+    
+    @if $sm {
+      @media(min-width: $mq-small){
+        flex-basis: 100%/$sm;
+        max-width: 100%/$sm;
+      }
+    }
+
+    @if $med {
+      @media(min-width: $mq-med){
+        flex-basis: 100%/$med;
+        max-width: 100%/$med;
+      }
+    }
+
+    @if $lg {
+      @media(min-width: $mq-large){
+        flex-basis: 100%/$lg;
+        max-width: 100%/$lg;
+      }
+    }
+
+    @if $xl {
+      @media(min-width: $mq-xlarge){
+        flex-basis: 100%/$xl;
+        max-width: 100%/$xl;
+      }
+    }
+
+    @if $xxl {
+      @media(min-width: $mq-xxlarge){
+        flex-basis: 100%/$xxl;
+        max-width: 100%/$xxl;
+      }
+    }
+  }
+  &.grid--center{
+    justify-content: center;
+  }
+}
+
+//---------------------------------------------- 
+//  Flex Grid Animation - flex-grid-animation()
+//  @description: Animation delay for flex grid
+//  @param:       $xs, $sm, $md, $lg, $xl: [null] - Media sizes
+//  @param:       $delay: [0.1s] - Animation delay of child elements
+//----------------------------------------------
+@mixin flex-grid-animation($xs, $sm, $med, $lg: null, $xl: null, $delay: 0.1s) {
+  
+  & > * {
+    $count: 1;
+    @while $count <= $xs {
+      &:nth-child(#{$xs}n + #{$count}) {
+        animation-delay: $delay * $count;
+      }
+      $count: $count + 1;
+    }
+      
+    @media (min-width: $mq-small) {
+      $count: 1;
+      @while $count <= $sm {
+        &:nth-child(#{$sm}n + #{$count}) {
+          animation-delay: $delay * $count;  
+        }
+        $count: $count + 1;
+      }
+    }
+    @media (min-width: $mq-med) {
+      $count: 1;
+      @while $count <= $med {
+        &:nth-child(#{$med}n + #{$count}) {
+          animation-delay: $delay * $count;  
+        }
+        $count: $count + 1;
+      }
+    }
+    @if $lg {
+      @media (min-width: $mq-large) {
+        $count: 1;
+        @while $count <= $lg {
+          &:nth-child(#{$lg}n + #{$count}) {
+            animation-delay: $delay * $count;  
+          }
+          $count: $count + 1;
+        }
+      }
+    }
+    @if $xl {
+      @media (min-width: $mq-xlarge) {
+        $count: 1;
+        @while $count <= $xl {
+          &:nth-child(#{$xl}n + #{$count}) {
+            animation-delay: $delay * $count;  
+          }
+          $count: $count + 1;
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------  
+//  Flex Row
+//  A helper to create flex rows
+//
+//  @param align - vert alignment
+//  @param $justify - horx positioning
+//  @param $wrap - wrap / no-wrap
+//  @mobile $mobile (boolean) - start row on mobile 
+//----------------------------------------------
+@mixin flex-row($align: null, $justify:null, $wrap: wrap, $mobile:false, $direction:row){
+  direction: $direction;
+  @if $align {
+    align-items: $align;
+  }
+  @if $justify{
+    justify-content: $justify;
+  }
+  @if $mobile == true {
+    display: flex;
+    flex-wrap: wrap;
+
+  } @else {
+
+    @media (min-width: $mq-med){
+      display: flex;
+      flex-wrap: $wrap;
+    }
+  }
+}
+
+
+//----------------------------------------------  
+//  Flex Column
+//  A helper to output cross browser requirements for 
+//  columns inside a flexbox parent. flex-basis isn't
+//  enough in all cases.
+//
+//  @param $width (size), $mobile (boolean)
+//----------------------------------------------
+@mixin flex-col($width, $mobile:false){
+  @if $mobile == true {
+    flex-basis: $width;
+    width: $width;
+    max-width: $width;
+
+  } @else {
+
+    @media (min-width: $mq-med){
+      flex-basis: $width;
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+
+//----------------------------------------------  
+//  CSS Columns helper
+//  A helper to output cross browser requirements for 
+//  columns inside a flexbox parent. flex-basis isn't
+//  enough in all cases.
+//
+//  @param $sm - $xl Breakpoints
+//  @param $gam - gab between cols
+//  @param $pad - col padding
+//----------------------------------------------
+@mixin col-grid($sm:null, $med:null, $lg:null, $xl:null, $gap:0,$pad:0){
+  position: relative;
+  display: block;
+  margin-left: -$pad;
+  margin-right: -$pad;
+  column-count: $sm;
+  column-gap: $gap;
+  -webkit-perspective: 1;
+
+  @if $med {
+    @media(min-width: $mq-med){
+      column-count: $med;
+    }
+  }
+
+  @if $lg {
+    @media(min-width: $mq-large){
+      column-count: $lg
+    }
+  }
+
+  @if $xl {
+    @media(min-width: $mq-xlarge){
+      column-count: $xl
+    }
+  }
+
+  & > *{
+    @media (min-width: $mq-med){
+      // Ensure columns break at parent
+      break-inside: avoid-column;
+      padding-left: $pad;
+      padding-right: $pad;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+//----------------------------------------------
+// Articles Mast
+//-----------------------------------------------
+.articles-mast{
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: $color-dark;
+  min-height: 40vh;
+
+  @media (min-width: $mq-med){
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 45%;
+    height: 100vh;
+  }
+
+  &__bgs{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &:after{
+      @include pseudo-el(0);
+      transition: opacity 2.5s ease-in-out;
+      background: rgba($color-dark, 0.5);
+      transition: background 1s ease;
+    }
+  }
+
+  &__bg{
+    @include bg-img-abs();
+     opacity: 0;
+     transition: opacity 1.5s ease-in-out;
+
+    &.is-visible{
+      opacity: 0.8;
+      transition: opacity 1.5s 0s ease-in-out;
+    }
+    &.is-visible-start{
+      opacity: 0.8
+    }
+  }
+
+  &__header{
+    z-index: 5;
+    position: relative;
+    width: 100%;
+  }
+
+  &__title{
+    text-align: center;
+  }
+}
+
+
+//----------------------------------------------
+// Articles Posts
+//-----------------------------------------------
+.articles-posts{
+  position: relative;
+  background-color: $color-dark;
+
+  @media (min-width: $mq-med){
+    width: 55%;
+    margin-left: 45%;
+  }
+
+  .post{
+
+    &__date{
+      display: block;
+      font-size: $font-xsmall;
+      margin-bottom: $mb;
+    }
+
+    &__link{
+      color: #fff;
+      display: block;
+      padding: 1.5em 2em;
+      margin: 0;
+      background-color: lighten($color-dark, 3);
+      transition: background-color 0.75s ease-in-out;
+
+      @media (min-width: $mq-med){
+        padding: 3em 6em;
+      }
+
+      &:hover{
+        background-color: $color-dark !important;
+      }
+    }
+
+    &:nth-of-type(odd) .post__link{
+      background-color: lighten($color-dark, 7);
+    }
+
+    &__title{
+      margin-bottom: 0.5em;
+      color: #fff;
+    }
+
+    &__text{
+      color: #999;
+      font-size: $font-xsmall;
+    }
+  }
+}

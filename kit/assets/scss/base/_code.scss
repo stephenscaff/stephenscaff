@@ -1,0 +1,160 @@
+//----------------------------------------------
+//  CODE and Highlighting
+//----------------------------------------------
+code, kbd, pre, samp {
+  font-family: $font-mono;
+  font-size: 0.9em;
+}
+pre {
+  padding: 2em 0.5em;
+  line-height: 1.9;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #242121;
+  background: #eee;
+  overflow: hidden;
+
+  @media (min-width: $mq-med){
+    padding: 2em 1.5em;
+  }
+}
+
+code.inline{
+  padding: 0.3em 0.75em;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+
+.highlighting, .highlight{
+  overflow-x: hidden;
+  margin: 0 -10% !important;
+
+  pre{
+    &::-webkit-scrollbar{
+      -webkit-appearance: none;
+      width: 3px;
+      height: 3px;
+      background: #ddd;
+    } 
+    &::-webkit-scrollbar-thumb{
+      background-color: #000;
+    }
+    &::-webkit-scrollbar-track{
+      background: #ddd;
+    }
+  }
+  code{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 5%;
+
+  }
+}
+
+
+
+/*----------------------------------------
+-SYNTAX HIGHLIGHTING
+@description: syntax highlighting via Prisim.js
+
+This build: 
+http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+actionscript+handlebars+json+markdown+jsx+sass+scss
+-----------------------------------------*/
+
+code[class*="language-"], 
+pre[class*="language-"] {
+font-family: $font-mono;
+direction: ltr;
+text-align: left;
+word-spacing: normal;
+tab-size: 4;
+hyphens: none;
+color: $color-white;
+}
+
+.lt-ie9 code[class*="language-"], 
+.lt-ie9 pre[class*="language-"] {
+ color: #a6a6a6;
+}
+
+pre[class*="language-"], :not(pre)>code[class*="language-"] {
+ background: darken($color-dark, 5);
+}
+
+pre[class*="language-"] {
+ padding: 1em;
+ margin: 2.5em auto 3em;
+ overflow: auto;
+ border-radius: 0.333333em;
+}
+
+.no-js  pre {
+  overflow: auto;
+}
+
+figcaption {
+  margin-bottom: 0;
+}
+
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: $color-grey;
+}
+
+.token.property, 
+.token.tag, 
+.token.boolean, 
+.token.number {
+  color: #a2adb6;
+}
+
+.token.comment, 
+.token.prolog, 
+.token.doctype, 
+.token.cdata {
+ color: #AEAEAE;
+}
+.token.punctuation {
+  color: #C3D0DC;
+}
+.namespace {
+ opacity: .7;
+}
+
+.token.selector, 
+.token.attr-name, 
+.token.string {
+ color: #b66f74;
+}
+.token.operator, 
+.token.entity, 
+.token.url, 
+.language-css 
+.token.string, 
+.style .token.string {
+  color: #FFF;
+}
+.token.atrule, 
+.token.attr-value, 
+.token.keyword {
+ color: #6e9fe1;
+}
+.token.regex, .token.important {
+ color: #e90;
+}
+.language-scss .token.variable {
+ color: #A78F8F;
+}
+.language-scss .token.statement {
+ color: #FF1000;
+}
+.token.important {
+ font-weight: 600;
+}
+.token.entity {
+ cursor: help;
+}

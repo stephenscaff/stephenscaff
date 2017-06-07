@@ -1,0 +1,113 @@
+//----------------------------------------------   
+//  Global Font Styles
+//  Extendable and global font/header styles
+//  _base/typography.scss handles header sizings and setup.
+//----------------------------------------------- 
+
+
+
+%font-title-caps{
+  font-family: $font-sans;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+%font-title{
+  font-family: $font-sans;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.175em;
+}
+
+%font-pretitle{
+  font-family: $font-sans;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: $font-xxsmall;
+}
+
+//----------------------------------------------
+//  Vertical font element
+//----------------------------------------------
+%font-vert{
+  display: inline-block;
+
+  font-size: 0.75em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media (min-width: $mq-med){
+    transform-origin: left top 0;
+    transform: rotate(-90deg) translate3d(-100%, 100%, 0);
+  }
+}
+
+
+//----------------------------------------------
+//  word-break()
+//  @description: Solution for one word per line. We need
+//  to apply within @media, so couldn't just be an extend.
+//----------------------------------------------
+@mixin word-break(){
+  word-spacing: 9999px;
+}
+
+//----------------------------------------------
+//  font-rwd
+//  Change font-size across breaks 
+//  @param: $font_sm  - at small
+//  @param: $font_med - at med break
+//  @param: $font_lg  - at Large break
+//  @param: $font_xl  - at Xlarge break  
+//----------------------------------------------
+@mixin font-rwd($sm:null, $med:null, $lg:null, $xl:null, $xxl:null) {
+  font-size: $sm;
+  
+  @if $med {
+    @media(min-width: $mq-med){
+      font-size: $med;
+    }
+  }
+
+  @if $lg {
+    @media(min-width: $mq-large){
+      font-size: $lg;
+    }
+  }
+
+  @if $xl {
+    @media(min-width: $mq-xlarge){
+      font-size: $xl;
+    }
+  }
+
+  @if $xxl {
+    @media(min-width: $mq-xxlarge){
+      font-size: $xxl;
+    }
+  }
+}
+
+//----------------------------------------------
+//  unstyled-list
+//  Creates an unstyled list, if you don't reset all lists
+//----------------------------------------------
+@mixin unstyled-list {
+  margin: 0 auto;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+//----------------------------------------------
+//  Text Overflow
+//  Ellipsis text to handle overflows
+//----------------------------------------------
+@mixin text-overflow{
+  max-width: 98%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

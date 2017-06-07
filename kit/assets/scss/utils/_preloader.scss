@@ -1,0 +1,67 @@
+//----------------------------------------------
+// Preloader
+//----------------------------------------------
+
+$preloader-hxw: 3em;
+
+.preloader {
+  position: absolute;
+  top: calc(50% - (#{$preloader-hxw} / 2));
+  right: 0;
+  left: 0;
+  width: $preloader-hxw;
+  height: $preloader-hxw;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top-color: $color-alpha;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite both;
+  opacity: 1;
+  transition: opacity 2s 0.2s ease-out;
+}
+
+.preloader--alpha{
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top-color: $color-alpha;
+}
+
+.preloader--white{
+  border-top-color: #fff;
+}
+
+%preloader--sm{
+  top: calc(50% - (#{$preloader-hxw} / 4));
+  width: $preloader-hxw / 2;
+  height: $preloader-hxw / 2;
+}
+
+//----------------------------------------------
+// Has Image Preloader, fade in
+//----------------------------------------------
+.has-preloader{
+  //4background-color: rgba(#fff, 0.3);
+
+  & > img{
+    opacity: 0;
+    will-change: opacity;
+    backface-visibility: hidden;
+    //transition: opacity 1s ease-in;
+  }
+
+  // Boom - We're loaded.
+  &.is-loaded{
+    
+    .preloader{
+      //animation: spin-out 2s linear forwards;
+      opacity: 0;
+      //transition: opacity 1s 0.3s ease-out;
+    }
+    & img{
+      opacity: 1;
+      //transition: opacity 1s 1s ease-in;
+      animation: fade-in 1s  0.75s ease both !important;
+    }
+  }
+}
+
+

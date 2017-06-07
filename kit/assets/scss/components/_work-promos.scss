@@ -1,0 +1,107 @@
+//----------------------------------------------
+//  Work Promos
+//  List style work previews on the home page, using the Chapter
+//  layout mixin. Features a hover / background-image reveal pattern
+//  with a radial graident overlay.
+//
+//  @requires (mixin) Chapters
+//  @see scss/components/_chapters.scss
+//  @see js/components/_work-promos.js
+//-----------------------------------------------
+.work-promo{
+  @include chapter();
+  
+  &__bgs{
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &:after{
+      @include pseudo-el(0);
+      transition: opacity 2.5s ease-in-out;
+      //background: radial-gradient(ellipse at center, rgba($color-dark,0.4) 10%, rgba($color-dark,0.9) 60%);
+      background: rgba($color-dark, 0.7);
+      transition: background 1s ease;
+
+      .is-hovering &{
+         //background: radial-gradient(ellipse at center, rgba($color-dark,0.1) 60%, rgba($color-dark,1) 50%);
+         //transition: background 1s ease;
+      }
+    }
+  }
+
+  &__bg{
+    @include bg-img-abs();
+     opacity: 0;
+     transition: opacity 1.5s ease-in-out;
+    filter:grayscale(100%);
+
+    &.is-visible{
+      //@include bg-overlay($color-black, 0.7);
+      opacity: 0.8;
+      transition: opacity 1.5s 0s ease-in-out;
+    }
+  }
+
+  &__content{}
+
+  &__title{}
+
+  &__heading{
+    //color: $color-light;
+    color: $color-alpha;
+    margin: $mb 0;
+    font-family: $font-sans;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &__items{
+    @include flex-grid(1, 2, $pad: 0.5em);
+    // @include flex-grid-animation(1, 2, 2, 2);
+  }
+
+  &__item{
+    padding-top: 0;
+    padding-bottom: 0.25em;
+    @media (min-width: $mq-med){
+      padding-bottom: 1em;
+    }
+  }
+
+
+  &__link{
+     padding: 0.25em 0;
+     transition: color 0.6s ease-in-out, opacity 1s ease;
+
+     @media (min-width: $mq-med){
+      padding: 1em 0;
+     }
+
+    &:first-child{
+      padding-top: 0;
+    }
+
+    .work-promo__items:hover &{
+      opacity: 0.5;
+    }
+
+    &:hover{
+      opacity: 1 !important;
+      transition: opacity 1s ease-in-out;
+    }
+  }
+
+  &__name{
+    color: #fff ;
+    margin-right: auto;
+    padding-right: 1em;
+
+    @include font-rwd($font-h5, $font-h3);
+  }
+}

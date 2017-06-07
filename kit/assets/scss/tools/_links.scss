@@ -1,0 +1,122 @@
+//---------------------------------------------- 
+//  link-styles()
+//  Transition Delay on nth-childs
+//  @param: $mainColor: [$color-dark] - initial color
+//  @param: $hoverColor:[$color-alpha]    - hover color
+//----------------------------------------------
+@mixin link-styles($mainColor: $color-dark, $hoverColor: $color-alpha){
+  color: $mainColor;
+  text-decoration: none; 
+  line-height:inherit;
+  transition: color 0.4s ease-in-out;
+
+  &:hover, &:focus{
+    color: $hoverColor;
+    transition: color 0.4s ease-in-out;
+  }
+  &:active{
+    color: darken($hoverColor, 25);
+  }
+}
+
+//----------------------------------------------  
+//  link-lines($color-alpha, $color-grey, $color-dark)
+//
+//  Link styles with an underline that animates in on hover.
+//  @param: $line_pos = position of the line;
+//  @param: $color = main color;
+//  @param: $line_color = the color of the line below link, before hover
+//  @param: $hover_color = color of hover, link and line.
+//----------------------------------------------
+@mixin link-line($line_pos: 0, $color: $color-alpha, $line_color: $color-dark, $hover_color: $color-dark){
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color; 
+  text-decoration: none; 
+  overflow-x:hidden; 
+  transition: color 0.4s ease-in-out;
+
+  &:after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: $line_pos;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $line_color;
+    transform:translateX(-110%);
+    transition: transform 0.6s $ease-cb-2, color 0.6s $ease-cb-2;
+  }
+  &:hover, &:focus{
+    cursor: pointer;
+    color: $hover_color !important;
+    transition: color 0.4s ease-in-out;
+  }
+  &:hover:after, &.is-active:after{
+    transform: translateX(0);
+    transition: transform 0.6s $ease-cb-2, color 0.6s $ease-cb-2;
+  }
+  &:active{
+    color: darken($hover_color, 25);
+  }
+}
+//----------------------------------------------  
+//  link-lines($color-alpha, $color-grey, $color-dark)
+//
+//  Link styles with an underline that animates in on hover.
+//  @param: $color = main color;
+//  @param: $line_color = the color of the line below link, before hover
+//  @param: $hover_color = color of hover, link and line.
+//----------------------------------------------
+@mixin link-lines($color: $color-dark, $line_color: $color-dark, $hover_color: $color-grey){
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color; 
+  text-decoration: none;
+  overflow-x:hidden;  
+  transition: color 0.4s ease-in-out;
+ 
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.3em;
+    width: 100%;
+    height: 1px;
+    background-color: $line_color;
+    transform:translateX(0%);
+    transition: transform 0.6s $ease-cb-2, color 0.6s $ease-cb-2;
+  }
+  &:before{
+    transform:translateX(-110%);
+    background-color: $hover_color;
+  }
+  &:after{
+    transform:translateX(0%);
+    transition-delay: 0.25s;
+  }
+  &:hover, &:focus, a:hover &{
+    cursor: pointer;
+    color: $hover_color !important;
+    transition: color 0.4s ease-in-out;
+  }
+  &:hover, a:hover &{
+    &:before, &:after{
+      transition: transform 0.6s $ease-cb-2, color 0.6s $ease-cb-2;
+    }
+    &:before{
+      transform: translateX(0%);
+      transition-delay: 0.25s;
+    }
+    &:after{
+      transform: translateX(105%);
+    }
+  }
+
+  &:active{
+    color: darken($hover_color, 25);
+  }
+}

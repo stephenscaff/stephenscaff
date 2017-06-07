@@ -1,0 +1,41 @@
+//----------------------------------------------
+// Post Content / Content
+// Wrapper for basic content styles (mostly typographic)
+//
+// @group content
+//-----------------------------------------------
+.content{
+
+
+  a{
+    @include link-lines($line_color: $color-alpha);
+  }
+  p:first-child{
+    //@extend %font-lead;
+  }
+
+  p{
+    margin-bottom: 1.5em;
+  }
+
+  h2, h3, h4, h5{
+    margin: 1.5em 0 0.75em;
+    font-weight: 700;
+  }
+
+
+  figcaption{
+    margin: 0.15em auto 1.5em;
+    font-size: $font-xxsmall;
+    text-align: center;
+    color: $color-midgrey;
+  }
+
+  figure{
+    margin: 1.75em auto;
+  }
+
+  figure + figure{
+    margin: 0.25em auto;
+  }
+}

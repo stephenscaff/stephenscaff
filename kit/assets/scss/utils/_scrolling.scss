@@ -1,0 +1,127 @@
+//----------------------------------------------
+//  Data-Scroll: No Js
+//  Fallback if no js
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//  @group data-scroll
+//----------------------------------------------
+.no-js{
+  [data-scroll]{
+    opacity:1;
+  }
+  li{
+    opacity:1;
+  }
+}
+
+
+//----------------------------------------------
+//  Data-Scroll Seq
+//  A sequential fade in for child nodes
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//----------------------------------------------
+[data-scroll-seq="li"], 
+[data-scroll-seq="article"]{
+  will-change: opacity;
+
+  .oh .js-letters span{
+    display: inline-block;
+    opacity: 0;
+    transform:translate3d(0,0%,0);
+    transition: opacity 1s ease;
+    @include nth-trans-delay(45,0.045s);
+  }
+  .is-animated .oh  .js-letters span{
+    opacity: 1;
+    //transition: transform 0.2 ease-in-out, opacity 0.6s  ease;
+    // @include nth-trans-delay(30,0.05s);
+  }
+}
+
+//----------------------------------------------
+//  Data-Scroll Seq
+//  A sequential fade in for child nodes
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//----------------------------------------------
+[data-scroll="stagger-in-slow"], 
+[data-load="stagger-in-slow"]{
+ will-change: opacity, transform;
+
+  .oh span{
+    display: inline-block;
+    //animation: slide-up;
+    transform:translate3d(0,0%,0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 1s ease;
+    @include nth-trans-delay(30,0.135s);
+  }
+  &.is-animated .oh  span, 
+  body.is-loaded & .oh  span{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+  }
+}
+
+
+//----------------------------------------------
+//  Data-Scroll : Stagger In Fast
+//  A sequential fade in for child nodes
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//----------------------------------------------
+[data-scroll="stagger-in-fast"], [data-load="stagger-in-fast"]{
+ will-change: opacity, transform;
+
+  .oh span{
+    display: inline-block;
+    transform:translate3d(0,0%,0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 1s ease;
+    @include nth-trans-delay(50,0.06s);
+  }
+  &.is-animated .oh  span, 
+  body.is-loaded & .oh  span{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+  }
+}
+
+//----------------------------------------------
+//  Data-Scroll
+//  Stagger in
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//----------------------------------------------
+[data-scroll="stagger-in"]{
+ will-change: opacity, transform;
+
+  .oh span{
+    display: inline-block;
+    //animation: slide-up;
+    transform:translate3d(0,0%,0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 1s ease;
+    @include nth-trans-delay(45,0.035s);
+  }
+  &.is-animated .oh  span{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+  }
+}
+
+
+[data-load="fade-in"]{
+  opacity: 0;
+
+  body.is-loaded &{
+    opacity: 1;
+    transition: 3s 1s ease; 
+  }
+}

@@ -1,0 +1,11 @@
+//----------------------------------------------
+//  Post Promos
+//  Post previews on the home page, using the Chapter
+//  layout mixin.
+//
+//  @requires (mixin) Chapters
+//  @see scss/components/_chapters.scss
+//-----------------------------------------------
+.posts-promo{
+  @include chapter();
+}
