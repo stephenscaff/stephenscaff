@@ -1,13 +1,10 @@
 //----------------------------------------------
-// Post Content / Content
-// Wrapper for basic content styles (mostly typographic)
-//
-// @group content
+// About Mast
 //-----------------------------------------------
 .about-mast{
   background-color: $color-dark;
   color: $color-white;
-  padding: 12vw 0;
+  padding: 12em 0 $pad;
 
   &__header, &__content{
     margin-bottom: $mb;
@@ -50,7 +47,9 @@
   }
 }
 
-
+//----------------------------------------------
+// Recognition
+//-----------------------------------------------
 
 .recognition{
   padding: $pad 0;
@@ -67,7 +66,11 @@
       color: #fff;
       display: flex;
       justify-content: space-between;
-      font-size: $font-small;
+      font-size: $font-xsmall;
+
+      @media (min-width: $mq-med){
+        font-size: $font-small;
+      }
     }
 
     li{
@@ -75,18 +78,17 @@
       padding: 0.75em 0;
     }
     li:after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background-color: $color-lightest;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-lightest;
     }
-        li.is-animated:after{
-          width: 100%;
-          transition: width 0.9s $ease-cb-2;
-        }
-      
+    li.is-animated:after{
+      width: 100%;
+      transition: width 0.9s $ease-cb-2;
+    }   
   }
 }

@@ -8,7 +8,8 @@
   position: relative;
   display: flex;
   align-items:center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 8em 0;
   color: #fff;
   background-color: $color-dark;
 
@@ -17,10 +18,18 @@
     position: fixed;
     //background-image: linear-gradient( to bottom, #000, rgba($color-dark,0.1) 100%); 
   }
-  
+  &__bg{
+    z-index: 0;
+    @include bg-img-abs();
+    animation: home-mast-bg-fade 2s 0.4s ease-in-out both;
+  }
   // Bg Vid
-  .home-mast__vid-wrap{
+  &__vid-wrap{
+    z-index: 1;
     @include bg-vid($opacity: 1, $reveal-amount: 0.3);
+    @media (max-width: $mq-med) {
+      display: none;
+    }
   }
  
   // __grid & __col for 2 cols layout
@@ -97,5 +106,15 @@
     background-color: $color-black;
     background-position: 50%;
     background-position: no-repeat;
+  }
+}
+
+@keyframes home-mast-bg-fade{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 0.6;
   }
 }

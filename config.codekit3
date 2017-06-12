@@ -1219,12 +1219,6 @@
 		"oAP": "\/inc\/paths\/paths.php",
 		"oF": 0
 		},
-	"\/inc\/post-helpers\/cpt-nav.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/post-helpers\/cpt-nav.php",
-		"oF": 0
-		},
 	"\/inc\/post-helpers\/images.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1237,12 +1231,6 @@
 		"oAP": "\/inc\/post-helpers\/includes.php",
 		"oF": 0
 		},
-	"\/inc\/post-helpers\/loops.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/post-helpers\/loops.php",
-		"oF": 0
-		},
 	"\/inc\/post-helpers\/pagination.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1253,12 +1241,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/post-helpers\/post-templates.php",
-		"oF": 0
-		},
-	"\/inc\/post-helpers\/query-filters.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/post-helpers\/query-filters.php",
 		"oF": 0
 		},
 	"\/inc\/post-helpers\/taxonomies.php": {
@@ -1283,12 +1265,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/post-types\/post-type-ex.php",
-		"oF": 0
-		},
-	"\/inc\/post-types\/post-type-home-slides.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/post-types\/post-type-home-slides.php",
 		"oF": 0
 		},
 	"\/inc\/post-types\/post-type-promos.php": {
@@ -3915,6 +3891,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/partials\/partial-swiss-clock.php",
+		"oF": 0
+		},
+	"\/partials\/partial-work-header.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/partial-work-header.php",
 		"oF": 0
 		},
 	"\/partials\/partial-work-mast.php": {

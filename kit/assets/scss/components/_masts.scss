@@ -27,8 +27,7 @@
   &__title, &__text{
     display: inline;
     font-family: $font-sans;
-    font-size: $font-small;
-
+    font-size: $font-base;
 
     @media (min-width: $mq-med){
       font-size: $font-h5;

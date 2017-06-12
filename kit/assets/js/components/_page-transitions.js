@@ -72,7 +72,7 @@
           }
 
           // Add our is-exiting class
-          s.body.addClass('is-exiting');
+          s.body.removeClass('is-loaded').addClass('is-exiting');
 
           // for a simple fadeout then redirect:
           // $('body').fadeOut(500, redirectPage);

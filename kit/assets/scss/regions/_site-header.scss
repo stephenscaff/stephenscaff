@@ -4,16 +4,63 @@
 //
 //  @group site-header
 //----------------------------------------------
+$header-height: 5em;
+$header-height-sm: 4em;
+
 .site-header {
   z-index: 9;
   position: fixed;
+  top:0;
   display: block;
   width: 100%;
   padding: 1em 0;
-  //height: $header-height;
-  //line-height: $header-height;
   color: $color-white;
-  transition: all 1s ease;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s ease;
+  @include engineGPU('position');
+
+  .scrolling-down &{
+    animation: nav-up ease-in-out .3s .1s both;
+  }
+
+  .scrolling-up &{
+    animation: nav-down ease-in-out .3s .1s both;
+  }
+
+  .is-exiting.scrolling-up &{
+    opacity: 0;
+    transition: opacity 0.75s 0.5s ease;
+  }
+
+  .scrolling-down &, .scrolling-up &{
+    background: $color-dark;
+    color: #fff;
+
+    .is-exiting &{
+      background-color: rgba(0,0,0,0);
+      transition: background-color 0.7s ease;
+    }
+  }
+
+
+  .theme-light &{
+    color: $color-dark;
+    background-color: $color-lightgrey;
+  }
+
+  .theme-dark-light.scrolling-down &, 
+  .theme-dark-light.scrolling-up &{
+    background: $color-lightgrey;
+    color: $color-dark;
+  }
+
+
+  body.close-to-top &,
+  body.scrolling-up.close-to-top &, 
+  body.at-top &{
+    background-color: rgba(0,0,0,0);
+  }
+
   
   &__grid{
     position: relative;
@@ -30,7 +77,7 @@
 //  Logo link wrap and logo svg.
 //----------------------------------------------
   &__logo{
-    @include link-styles($color-lighter, $color-white);
+    @include link-styles($color-light, $color-white);
     
     .icon-shield{
       font-size: 1.5em;
@@ -47,16 +94,36 @@
   &__nav{
     display: flex;
     margin-left: auto;
+    $color-current: currentColor;
 
     a{
-      @include link-line($line_pos: 50%, $color: $color-light, $line_color: $color-white, $hover_color:$color-white);
+      opacity: 0;
+      @include link-nav();
       margin-left: 1em;
       padding: 0 0.1em;
       text-transform: lowercase;
 
-      .theme-light &{
-        @include link-line($line_pos: 50%, $color: $color-dark, $line_color: $color-dark, $hover_color:$color-grey);
+      .is-exiting &, .is-loaded.is-exiting &{
+        opacity: 0;
+        transition: opacity 1s ease;
+        @include nth-trans-delay(4, 0.2s);
+      }
+
+
+      .is-loaded &{
+        opacity: 1;
+        transition: opacity 1s ease;
+        @include nth-trans-delay(4, 0.15s);
       }
     }
   }
+}
+
+@keyframes nav-down {
+  0%   { transform: translate3d(0,-$header-height,0); }
+  100% { transform: translateed(0,0,0); }
+}
+@keyframes nav-up {
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(0,-$header-height,0); }
 }

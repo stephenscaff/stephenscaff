@@ -20,8 +20,8 @@ if (!class_exists('WpImageSettings ')) {
     add_filter('intermediate_image_sizes_advanced',  array($this, 'remove_image_sizes'));
     add_filter('init',  array($this, 'medium_images'));
     add_filter('init',  array($this, 'large_images'));
-    add_filter('init',  array($this, 'add_image_sizes'));
-    add_filter('image_size_names_choose',  array($this, 'add_images_to_admin'));
+    //add_filter('init',  array($this, 'add_image_sizes'));
+    //add_filter('image_size_names_choose',  array($this, 'add_images_to_admin'));
     add_filter('post_thumbnail_html',  array($this, 'remove_wxh_attribute' ));
 
     // Comment out the following method calls for src set images
@@ -48,14 +48,14 @@ if (!class_exists('WpImageSettings ')) {
  */
   function medium_images(){
     update_option( 'medium_size_w', 1250 );
-    update_option( 'medium_size_h', 750 );
+    //update_option( 'medium_size_h', 750 );
 
-    // Add cropping capability
-    if(false === get_option('medium_crop')) {
-      add_option('medium_crop', '1'); 
-    } else {
-      update_option('medium_crop', '1');
-    }
+    // // Add cropping capability
+    // if(false === get_option('medium_crop')) {
+    //   add_option('medium_crop', '1'); 
+    // } else {
+    //   update_option('medium_crop', '1');
+    // }
   }
 
 /**
@@ -65,13 +65,13 @@ if (!class_exists('WpImageSettings ')) {
  */
   function large_images(){
     update_option( 'large_size_w', 1500 );
-    update_option( 'large_size_h', 900 );
+    //update_option( 'large_size_h', 900 );
 
-    if(false === get_option("large_crop")) {
-         add_option('large_crop', '1'); 
-    } else {
-      update_option('large_crop', '1');
-    }
+    // if(false === get_option("large_crop")) {
+    //      add_option('large_crop', '1'); 
+    // } else {
+    //   update_option('large_crop', '1');
+    // }
   }
 
 /**
@@ -86,7 +86,6 @@ if (!class_exists('WpImageSettings ')) {
   function add_image_sizes(){
     // New Image: 'Mast'
     add_image_size( 'mast', 2000, 1200, true );
-    add_image_size( 'team', 1250, 1000, true );
   }
 
 /**
@@ -99,7 +98,6 @@ if (!class_exists('WpImageSettings ')) {
 
     return array_merge( $sizes, array(
       'mast' => __('Mastheads'),
-      'team' => __('Team'),
     ));
   }
 
@@ -152,3 +150,41 @@ if (!class_exists('WpImageSettings ')) {
   }
 }
 new WpImageSettings ();
+
+
+
+
+add_filter( 'max_srcset_image_width', 'jumpoff_max_srcset_image_width', 10 , 2 );
+
+function jumpoff_max_srcset_image_width() {
+  return 2000;
+}
+
+
+
+
+
+/**
+ * Responsive Image Helper Function
+ *
+ * @param string $image_id the id of the image (from ACF or similar)
+ * @param string $image_size the size of the thumbnail image or custom image size
+ * @param string $max_width the max width this image will be shown to build the sizes attribute 
+ */
+
+function jumpoff_responsive_image($image_id,$image_size,$max_width){
+
+  // check the image ID is not blank
+  if($image_id != '') {
+
+    // set the default src image size
+    $image_src = wp_get_attachment_image_url( $image_id, $image_size );
+
+    // set the srcset with various image sizes
+    $image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+
+    // generate the markup for the responsive image
+    return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+
+  }
+}

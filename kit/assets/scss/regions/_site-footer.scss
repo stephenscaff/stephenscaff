@@ -47,6 +47,11 @@
   .single &{
     display: none;
   }
+  .page-blog &{
+    @media (min-width: $mq-med){
+      display: none;
+    }
+  }
 }
 //----------------------------------------------
 //  Sticky Footer via Flex

@@ -20,7 +20,7 @@ $post_subtitle = get_field('post_subtitle');
 
 <header class="post-mast <?php if ($ft_img_position === 'post-mast-bg') : echo 'has-bg'; endif; ?>">
   <?php if ($ft_img_position === 'post-mast-bg') : ?>
-    <figure class="post-mast__bg" style="background-image: url(<?php echo jumpoff_ft_img('full'); ?>"></figure>
+    <figure class="post-mast__bg" style="background-image: url(<?php echo jumpoff_ft_img('full'); ?>)"></figure>
   <?php endif; ?>
   <div class="grid-sm">
     <div class="post-mast__header">
@@ -40,7 +40,7 @@ $post_subtitle = get_field('post_subtitle');
 
 <?php if ($ft_img_position == 'post-mast-img') : ?>
   <section class="post-img">
-    <div class="grid-lg">
+    <div class="grid-full-lg">
       <figure class="post-img__figure">
         <img class="post-img__img" src="<?php echo $post_ft_img; ?>">
       </figure>

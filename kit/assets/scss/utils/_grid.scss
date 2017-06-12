@@ -88,3 +88,15 @@
     max-width: 38em;
   }
 }
+
+//----------------------------------------------
+//  Grid Full on Mobile
+//  @group Grid
+//----------------------------------------------
+.grid-full-lg{
+  @extend .grid-lg;
+  @media (max-width: $mq-med){
+    width: 100%;
+    max-width: 100%;
+  }
+}

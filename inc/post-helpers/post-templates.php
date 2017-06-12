@@ -37,36 +37,6 @@ function jumpoff_excerpt($characters, $rep='...') {
   return $shortened_excerpt;
 }
 
-/**
- *  jumpoff_title
- *
- *  Outputs a shortened the_title via length arg (by char)
- *
- *  @param int  $characters Number of chars to output
- *  @param string  $rep Ellipser
- *  @return $shortened_title
- */ 
-function jumpoff_title($characters, $rep='...') {
-  
-  // Get the title via wp's the_title
-  $title = the_title('', '', false);
-  
-  // Run through our text limit funciton
-  $shortened_title = jumpoff_text_limit($title, $characters, $rep);
-
-  // Return 
-  return $shortened_title;
-}
-
-/**
- *  jumpoff_title_firstword
- *  Get first work from title
- *  @return $title
- */ 
-function jumpoff_title_firstword(){
-  $title = current(explode(' ', get_the_title()));
-  return $title;
-}
 
 /**
  * jumpoff_vid_embed

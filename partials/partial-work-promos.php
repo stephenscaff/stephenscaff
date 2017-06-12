@@ -16,6 +16,7 @@ $dribbble = get_field('dribbble', 'option');
 ?>
 
 <section id="work" class="work-promo js-promo">
+  <?php if (!wp_is_mobile()) : ?>
   <!-- Bgs -->
   <div class="work-promo__bgs">
     <?php 
@@ -36,13 +37,14 @@ $dribbble = get_field('dribbble', 'option');
           <source type="video/mp4" src="<?php echo $ft_video['url']; ?>">
         </video>
       </figure>
-    <?php else : ?>
+    <?php elseif ($promo_img && !wp_is_mobile()) : ?>
     <figure class="work-promo__bg js-promo-bg" style="background-image: url(<?php echo $promo_img['url']; ?>)"></figure>
     <?php 
     endif; 
     endforeach; 
     ?>
   </div>
+    <?php endif; ?>
 
   <div class="grid-lg">
     <div class="work-promo__grid">
@@ -60,11 +62,11 @@ $dribbble = get_field('dribbble', 'option');
           'post_type'        => 'work',
           'posts_per_page'   => -1,
         );
-        $count = 0;
+        //$count = 0;
         $promo_contents = get_posts ($args);
 
         foreach ( $promo_contents as $post ) : setup_postdata( $post ); 
-          $count++;
+          //$count++;
           $promo_img = get_field('promo_image');
           $ft_video = get_field('featured_video');
         ?>

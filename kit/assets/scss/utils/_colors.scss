@@ -14,22 +14,10 @@
   }
 }
 
-.bg-lightgrey, .theme-grey{
+.bg-lightgrey{
  background-color: $color-lightgrey;
 }
 
 .bg-alpha{
   background-color: $color-alpha;
-}
-
-
-//----------------------------------------------
-// Color Themes
-//----------------------------------------------
-.theme-dark{
-  background-color: $color-dark;
-}
-
-.theme-grey{
-  background-color: $color-lightgrey;
 }

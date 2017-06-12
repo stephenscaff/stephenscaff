@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
       <span class="preloader"></span>
     </figure>
     <header class="post__header" data-scroll="stagger-in">
-      <h3 class="post__title"><span class="oh"><span class="js-letters"><?php the_title(); ?></span></span></h3>
+      <h3 class="post__title"><span class="oh"><span class="js-words"><?php the_title(); ?></span></span></h3>
       <p class="post__text"><?php echo jumpoff_excerpt('150'); ?></p>
       <span class="post__btn btn-white">Read Post</span>
     </header>

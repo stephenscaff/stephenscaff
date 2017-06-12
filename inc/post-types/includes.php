@@ -11,4 +11,3 @@ function jumpoff_flush_rewrite_rules() {
 
 require_once('post-taxonomy.php');
 require_once('post-type-work.php');
-require_once('post-type-home-slides.php');

@@ -1,11 +1,12 @@
 //----------------------------------------------
 //  Chapters
-//
 //  Left right 2 col layout jaun used on home page.
 //-----------------------------------------------
 
+// Pseudo Border ELement
 @mixin pseudo-border($width: 100%, $color:$color-light){
   position: relative;
+
   &:after{
     content: '';
     position: absolute;
@@ -18,6 +19,7 @@
   }
 }
 
+// Chapters
 @mixin chapter(){
   position: relative;
   display: flex;

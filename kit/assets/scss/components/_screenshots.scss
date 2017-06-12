@@ -5,7 +5,12 @@
 //-----------------------------------------------
 .screenshots{
   background-color: $color-lightgrey;
-
+  
+  .grid, .grid-med, .grid-lg{
+    @media (max-width: $mq-med) {
+      width: 95%;
+    }
+  }
   &__grid{
     display: flex;
 
@@ -22,35 +27,6 @@
   }
 }
 
-.screenshots.screenshots--browser{
-  .screenshots__grid{
-    flex-wrap: wrap;
-  }
-
-  .screenshots__item{
-    @media (min-width: $mq-med){
-      padding: 1.5em;
-      margin-bottom: -0.75em;
-    }
-  }
-
-   .screenshots__item.js-scroll{
-    opacity: 0;
-    transition: opacity 1s ease;
-
-    &.is-animated{
-      opacity: 1;
-      transition: opacity 1s ease;
-    }
-  }
-
-    .screenshot-half{
-      @include flex-col(50%);
-    }
-    .screenshot-full{
-      width: 100%;
-    }
-}
 //-----------------------------------------------
 // Screenshot 
 //-----------------------------------------------
@@ -75,6 +51,40 @@
   .screenshots--browser & .has-bg{
     display: block;
     padding: 3.5vw;
+  }
+}
+
+
+//-----------------------------------------------
+// Screenshot: Browser Options Wrap
+//-----------------------------------------------
+.screenshots.screenshots--browser{
+  .screenshots__grid{
+    flex-wrap: wrap;
+  }
+
+  .screenshots__item{
+    @media (min-width: $mq-med){
+      padding: 1.5em;
+      margin-bottom: -0.75em;
+    }
+  }
+
+   .screenshots__item.js-scroll{
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    &.is-animated{
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+  }
+
+  .screenshot-half{
+    @include flex-col(50%);
+  }
+  .screenshot-full{
+    width: 100%;
   }
 }
 
@@ -125,7 +135,7 @@
     right: 10px;
   }
   .browser-dot:after{
-    left: 0.5em;
+    left: 10px;
   }
 }
 
@@ -213,11 +223,23 @@
 .screenshots--phone{
   @media (max-width: $mq-med){
     overflow-x: auto;
-    margin-bottom: -2em;
+    margin: -1em 0;
   }
 
   .screenshots__item{
-    min-width: 17em;
+    min-width: 15em;
+    @media (min-width: $mq-med){
+      min-width: 17em;
+    }
+    @media (max-width: $mq-med){
+      font-size: 75%;
+      margin-right: 2.5em;
+    }
+  }
+  .screenshots__grid{
+    @media (max-width: $mq-med){
+      margin-left: 10%;
+    }
   }
 }
 

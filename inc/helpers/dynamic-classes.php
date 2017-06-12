@@ -81,7 +81,7 @@ function jumpoff_body_class($classes) {
   );
 
   // Add specific classes
-  //$classes[] = 'page-is-loading';
+  $classes[] = 'at-top';
   $classes = array_diff($classes, $remove_classes);
   return $classes;
 }

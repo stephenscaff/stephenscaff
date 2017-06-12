@@ -11,8 +11,98 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+
+<!--
+                Hey Code Peeker....
+                            _                            
+                         .-" `.                          
+                         ;:":  ""--..                    
+                .-+. ,gpd$L\:._      ""-._               
+               /  //;$SS$$$$SS$$t--.      "-._           
+             .'  `.//SS$P^"""TS$$S. "-.       "-,        
+           .'    _ "-S^"      TS$$Sb   "-.       `.      
+         .'    .':S$Y      _.. SS$$Sb-'   "-.      ;     
+       .'    .'  SS$;,=-.  ._.`:S$$SS;       j     ;     
+     .'    .'   :SS$$.-'        SS$$SS\     /     /      
+   .'     /     SS$$S;    -     SS$$SS ;   /     /       
+ .'      /   ._dSS$$SS   .--.  :SS$$$S\;  /     /        
+/       /     :SS$$SS$b. `--'  $$SS$$S ) /     /         
+\      :      ;SS$$SS$$SS.___.'$$SS$$Sb /     /          
+ \      "-.   SS$$SS$$$SS      $$SS$$SS';    /           
+  `.       "-dSS$$SS$$SS:;     :$$SSSP      /            
+    `.              "^S^':     '^TSS'      /             
+      "-.      `.     ::-.   _ .-"\\      /              
+         "-.  -._\    ;;           \\  : :               
+            "-.   \  ::             \\ ; ;               
+               $.  `.;;       ,      \\;:                
+              dS$\  / '-._    :  _.-"" \;                
+           `-:S$^$t'      ""--:""       ;                
+              TP :$$ ;        ::        :                
+                d$S$_:        ;-\       ;                
+               :$SS$; `.____.'   `.___.j                 
+               $$SS$$                  ;                 
+              / T$S$$;  ;      ;    ; :                  
+             :   `TS$$  :      :    : ;                  
+                   `T$         :     :                   
+                     ;         ;     ;                   
+                    /                ;                   
+                  .'                 :                   
+                 /      :           ;:                   
+                /       ;     c     ::                   
+               :`.      ;           : ;                  
+               ;  "-.   :           ; :                  
+              :_     "-.            .' ;                 
+              ; "-.     ""--..__..-"   :                 
+             :     `.                _.-;                
+             ;       `.           .-"   ;                
+             ;         `.       .'      ;                
+             ;           \     /        :                
+             ;            \   /         :                
+             ;             \_/          :                
+             ;             ::           :                
+             ;             :;           ;                
+             :             :;           ;                
+              ;            ;;          :                 
+              |            ;;          |                 
+              :           : ;          ;                 
+               ;          : ;         :                  
+               :          ; :         |                  
+                ;         ; :         ;                  
+                :         ; :        :                   
+                 ;        ; :        |                   
+                 :        ; :        ;                   
+                  ;       : :       :                    
+                  : ;   : :  ;  ;   |                    
+                   ;:   ; ;  :  :   :                    
+                   : \    ;   \      "-.                 
+                   :      ;    \        \                
+                   ;      :     \      .d$b              
+                  db.___.d$b     \__.g$$$$$b             
+                  $$$$$$$$$$     :$$$$$$$$$$b            
+                  $$$$$$$$$$      T$$$$$$$$$$;           
+                  :$$$$$$$$$       T$$$$$$$$$$           
+                   $$$$$$$$$        `T$$$$$$$$b          
+                   $$$$$$$$;          T$$$$$$$$;         
+                   :$$$$$$$            T$$$$$$$$         
+                   :$$$$$$$             T$$$$$$$;        
+                    $$$$$$$              T$$$$$$$        
+                    $$$$$$$               T$$$$$$;       
+                    $$$$$$$                T$$$$$$       
+                    :$$$$$;                 T$$$$$b      
+                    :$$$$$;                  T$$$S$b.    
+                    :$$$$S;                   SSS$$$$bp. 
+                    :$$$$S;                   :S$$$$$S$$;
+                    $S$$SS;                    S$$$$$$SP 
+                   :$SSSSS;                    :$$$$$$S  
+                   $$$$$$$;                     $$$$$$$  
+                   $$$$$$$$                     :$$SS$$  
+                   $$$$$$$$                      SSS$$$  
+                   $$$$$$$$                      :$$$$;  
+                   :$$$$SS;                       `^^'   
+                    TSSSSP                               
+                     `^^'
+
+-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
@@ -21,9 +111,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php
 // Meta/OG variables
 $meta_title = get_post_meta( get_the_ID(), 'seo_title', true ) ? get_post_meta( get_the_ID(), 'seo_title', true ) : wp_title('|', false, 'right') . get_bloginfo('name');
-$meta_author = "Urban Influence";
+$meta_author = "Stephen 'muthaeffen' Scaff";
 $meta_site_name = get_bloginfo('name') .' - '. get_bloginfo('description');
-$meta_description = get_post_meta( get_the_ID(), 'seo_description', true ) ? get_post_meta( get_the_ID(), 'seo_description', true ) : "Urban Influence is.";
+$meta_description = get_post_meta( get_the_ID(), 'seo_description', true ) ? get_post_meta( get_the_ID(), 'seo_description', true ) : "Stephen Scaff is a Front-end developer and designer from Pittsburgh, pushing pixels in the Pacific Northwest.";
 ?>
 
 <!-- Title and Meta-->
@@ -42,9 +132,9 @@ $meta_description = get_post_meta( get_the_ID(), 'seo_description', true ) ? get
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="<?php wp_title('|', true, 'right'); bloginfo('name'); ?>"/>
 <meta name="twitter:url" content="<?php echo the_permalink() ?>">
-<meta name="twitter:site" content="@pigeonwisdom"/>
-<meta name="twitter:creator" content="https://twitter.com/pigeonwisdom">
-<meta name="twitter:domain" content="http://urbaninfluence.com"/>
+<meta name="twitter:site" content="@stephenscaff"/>
+<meta name="twitter:creator" content="https://twitter.com/stephenscaff">
+<meta name="twitter:domain" content="http://stephenscaff.com"/>
 <meta name="twitter:image" content="<?php jumpoff_ft_img('large'); ?>" />
 
 <!-- Mobile -->

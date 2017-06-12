@@ -25,3 +25,22 @@ img, svg, figure, picture, object, embed, iframe, video {
     height: 100%;
   }
 }
+
+//----------------------------------------------
+//  CodePens
+//----------------------------------------------
+.codepen {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 3em 0;
+
+  @media (max-width: $mq-med) {
+    margin: 4em -7%;
+    width: calc(100% + 12%);
+  }
+
+  iframe{
+    min-height: 30em;
+  }
+}

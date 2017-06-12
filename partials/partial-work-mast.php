@@ -31,7 +31,7 @@ $wm_video = get_field('wm_video');
 <section class="mast <?php if ($wm_bg_color) : echo $wm_bg_color; endif; ?>">
   <div class="mast__bg"></div>
   <?php if ($wm_image) : ?>
-    <figure class="mast__figure" style="background-image: url(<?php echo $wm_image['url']; ?>"></figure>
+    <figure class="mast__figure" style="background-image: url(<?php echo $wm_image['url']; ?>)"></figure>
   <?php endif; if ($wm_video && !wp_is_mobile()) : ?>
     <!-- bg-vid -->
     <div class="mast__vid bg-vid">

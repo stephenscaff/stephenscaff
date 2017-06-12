@@ -42,7 +42,6 @@ if (is_singular('work'))  : ?>
         <h1 class="next__title">
           <span class="oh"><span><?php echo get_the_title($next_post); ?></span></span>
         </h1>
-
         <span class="btn-white">Read Story</span>
       </header>
     </div>

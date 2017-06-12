@@ -1,8 +1,9 @@
 //---------------------------------------------- 
-//  Post feed / grid                  
+//  Post Mast                
 //----------------------------------------------
 .post-mast{
-  padding: 12em 0 $pad-med;
+  position: relative;
+  padding: $pad-lg 0 $pad-med;
 
   &__bg{
     @include bg-img-abs();
@@ -23,7 +24,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    max-width: 12em;
+    max-width: 10em;
     margin: 0 0 $mb*2;
     
     > *:first-child{
@@ -43,7 +44,6 @@
     color: currentColor;
   }
 
-
   .metas-sep{
     position: relative;
     flex: 1;
@@ -54,9 +54,16 @@
 
   &__title{
     margin-bottom: $mb/2;
-    color: current3Color;
+    color: currentColor;
   }
   &__subtitle{
-    font-size: $font-h3;
+    font-size: $font-h4;
+    line-height: 1.5;
+
+    .has-bg &{
+      max-width: 16em;
+      margin: 0 auto;
+    }
   }
 }
+

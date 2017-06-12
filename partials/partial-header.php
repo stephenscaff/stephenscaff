@@ -32,9 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     </a>
   <?php endif; ?>
     <nav class="site-header__nav">
-      <?php if (!is_page('home')) : ?>
-      <a class="<?php echo jumpoff_active_class('home'); ?>" href="<?php echo jumpoff_page_url('home'); ?>/#work">Work</a>
-      <?php endif; ?>
+    
+      <a class="" href="<?php echo jumpoff_page_url('home'); ?>/#work">Work</a>
       <a class="<?php echo jumpoff_active_class('about'); ?>" href="<?php echo jumpoff_page_url('about'); ?>">About</a>
       <a class="<?php echo jumpoff_active_class('articles'); ?>" href="<?php echo jumpoff_page_url('articles'); ?>">Articles</a>
     </nav> 

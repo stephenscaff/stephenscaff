@@ -25,6 +25,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    animation: fade-in 1.5s 0.5s ease both;
 
     &:after{
       @include pseudo-el(0);

@@ -11,22 +11,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-?>
-
-<?php
-/**
-* Posts module
-*
-* The module for adding posts or post type sections.
-*
-* @author       Stephen Scaff
-* @package      SandP
-* @see          kit/scss/components/_sliders.scss
-* @version      1.0
-*/
-
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 global $post ; 
 
 $args = array(

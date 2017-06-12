@@ -18,7 +18,8 @@
             "choices": {
                 "theme-light": "Light",
                 "theme-dark": "Dark",
-                "theme-grey": "Grey"
+                "theme-grey": "Grey",
+                "theme-dark-light": "Dark Light"
             },
             "default_value": [
                 "theme-light"
@@ -62,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1496756700
+    "modified": 1497099314
 }

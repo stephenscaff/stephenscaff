@@ -6,3 +6,23 @@
     min-height: 30em;
   }
 }
+
+
+
+.codepen {
+  position: relative;
+  width: calc(100% + 15%);
+  max-width: none;
+  //margin: 3em 0;
+  margin: 3em -7.5%;
+  width: calc(100% + 15%);
+  @media (min-width: $mq-med) {
+    margin: 4em -5em;
+    width: calc(100% + 10em);
+  }
+
+
+  iframe{
+    min-height: 30em;
+  }
+}
