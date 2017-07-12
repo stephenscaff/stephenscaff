@@ -90,9 +90,11 @@
   }
 
   &__title{
+    width: 99%;
     font-weight: 400;
     margin-bottom: 0;
     color: currentColor;
+    word-wrap: break-word;
 
     .theme-dark &{
       color: $color-white;

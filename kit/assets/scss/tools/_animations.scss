@@ -74,9 +74,12 @@
 //  engineGPU()
 //  @decrption: Trigger GPU, sans transform
 //----------------------------------------------
-@mixin engineGPU($type: ''){
+@mixin engineGPU($type: '', $hardware: false){
   will-change: $type;
   visibility: visible;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  @if $hardware == true{
+    transform: translatez(0);
+  }
 }
 

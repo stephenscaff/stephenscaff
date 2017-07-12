@@ -16,41 +16,11 @@ code.inline {
   border-radius: 2px;
 }
 
-// .highlighting,
-// .highlight,
-// :not(pre)>code[class*="language-"], 
-// pre[class*="language-"] {
-//   overflow-x: hidden;
+//----------------------------------------------
+//  Prisim.js highlighting
+//  http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+actionscript+handlebars+json+markdown+jsx+sass+scss
+//----------------------------------------------
 
-//   pre {
-//     &::-webkit-scrollbar {
-//       -webkit-appearance: none;
-//       width: 3px;
-//       height: 3px;
-//       background: #ddd;
-//     }
-//     &::-webkit-scrollbar-thumb {
-//       background-color: #000;
-//     }
-//     &::-webkit-scrollbar-track {
-//       background: #ddd;
-//     }
-//   }
-//   code {
-//     max-width: 100%;
-//     display: block;
-//     padding: 0 5%;
-//   }
-// }
-
-
-/*----------------------------------------
--SYNTAX HIGHLIGHTING
-@description: syntax highlighting via Prisim.js
-
-This build: 
-http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+actionscript+handlebars+json+markdown+jsx+sass+scss
------------------------------------------*/
 
 pre[class*="language-"],
 code[class*="language-"]{
@@ -114,7 +84,7 @@ abbr {
 .token.tag,
 .token.boolean,
 .token.number {
-  color: #a2adb6;
+  color: #83bbe4;
 }
 
 .token.comment,
@@ -135,7 +105,7 @@ abbr {
 .token.selector,
 .token.attr-name,
 .token.string {
-  color: #b66f74;
+  color: #81d6ff;
 }
 
 .token.operator,

@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
 
   &__bg{
     z-index: 0;

@@ -29,7 +29,7 @@ function scrollDirection(){
       if(st + $(window).height() < $(document).height()) {
         body.removeClass(scrollingDown).addClass(scrollingUp); 
       }
-      if(st === 0) {
+      if(st <= 10) {
         body.removeClass(scrollingDown).removeClass(scrollingUp); 
       }
     }
@@ -48,56 +48,56 @@ scrollDirection();
 
 
 
-/** 
- * Scrolling Nav
- * Function for nav interactions on scroll.
- */
-(function($) {
+// /** 
+//  * Scrolling Nav
+//  * Function for nav interactions on scroll.
+//  */
+// (function($) {
 
-  var ScrollingNav = (function() {
+//   var ScrollingNav = (function() {
     
-    var $body = $('body'),
-        scrollDistance = '70',
-        scrollThrottle = '350',
-        scrollingClass = 'scrolling-down';
+//     var $body = $('body'),
+//         scrollDistance = '70',
+//         scrollThrottle = '350',
+//         scrollingClass = 'scrolling-down';
       
-    return{
+//     return{
       
-      init: function() {  
-        this.onScrollDown();
-      },
+//       init: function() {  
+//         this.onScrollDown();
+//       },
 
-      /** 
-       * Scrolling Down
-       * Throttles scrolling via setInterval
-       */
-      onScrollDown: function(){
+//       /** 
+//        * Scrolling Down
+//        * Throttles scrolling via setInterval
+//        */
+//       onScrollDown: function(){
         
-        var scrolledDown;
+//         var scrolledDown;
 
-        $(window).scroll(function(){
-          scrolledDown = true;
-        });
-        // Throttle scroll
-        setInterval(function() {
-          if (scrolledDown) {
-            ScrollingNav.hasScrolled();
-            scrolledDown = false;
-          }
-        }, scrollThrottle);
-      },   
+//         $(window).scroll(function(){
+//           scrolledDown = true;
+//         });
+//         // Throttle scroll
+//         setInterval(function() {
+//           if (scrolledDown) {
+//             ScrollingNav.hasScrolled();
+//             scrolledDown = false;
+//           }
+//         }, scrollThrottle);
+//       },   
 
-      /**
-       * Has Scrolled
-       * Adds and removes scrolling class to body
-       */
-      hasScrolled: function() {
-        var scrolling = $(window).scrollTop();
-        (scrolling >= scrollDistance) ? $body.addClass(scrollingClass) : $body.removeClass(scrollingClass);
-      },
-    };
-  })();
+//       /**
+//        * Has Scrolled
+//        * Adds and removes scrolling class to body
+//        */
+//       hasScrolled: function() {
+//         var scrolling = $(window).scrollTop();
+//         (scrolling >= scrollDistance) ? $body.addClass(scrollingClass) : $body.removeClass(scrollingClass);
+//       },
+//     };
+//   })();
   
-ScrollingNav.init();
-})(jQuery);
+// ScrollingNav.init();
+// })(jQuery);
 

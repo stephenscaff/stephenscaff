@@ -9,12 +9,12 @@
     display: block;
     padding:  $pad-xl 0;
     overflow: hidden;
-    transition: color 1.5s ease, background-color 1.5s ease;
+    transition: color 1.5s ease, background 1.5s ease;
 
     &:hover{
       color: #fff;
-      background-color: $color-dark !important;
-      transition: color 1.5s ease, background-color 1.5s ease;
+      background-color: $color-dark;
+      transition: color 1.5s ease, background 1.5s ease;
 
       *{
         color: #fff;
@@ -33,6 +33,10 @@
     .next--work &{
       background-color: #fff;
       color: $color-dark;
+
+      &:hover{
+        background-color: $color-dark;
+      }
     }
   }
 
@@ -41,11 +45,11 @@
     @include bg-img-abs();
     @include bg_overlay($color-dark, 0.2);
     transform: scale(1);
-    transition: transform 3.5s ease-in-out;
+    transition: transform 5s ease-in-out;
 
     .next.has-bg .next__link:hover &{
       transform: scale(1.2);
-      transition: transform 3.5s ease-in-out;
+      transition: transform 5s ease-in-out;
     }
   }
 

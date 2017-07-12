@@ -1,62 +1,8 @@
-
+  
 
 
 /*global jQuery */
 /*jshint unused:false */
-
-/** 
- * Scroll To Anchor
- *
- * @useage: 
-  $('html').scrollAnchor({
-    offset: '0',
-    addActive: 'true',
-    complete : function() {},
-  });
- */
-(function($) {
-  $.fn.scrollAnchor = function(options, callback) {
-    // Establish our default settings
-    var defualts = $.extend({
-      offset: '0',
-    }, options);
-    return this.each(function() {
-
-      $('[data-scrollto]').click(function(e) {
-        e.preventDefault();
-        var $this = $(this),
-            offset = options.offset,
-            target = ('#' + $(this).data('scrollto')),
-            $target = $(target);
-        
-        //Add active Class
-        if (options.addActive) {
-          $('a[data-scrollto]').removeClass('active');
-        }
-                
-        //Scroll animation
-        $('html, body').stop().animate({
-          'scrollTop': $target.offset().top - offset
-        }, {
-            // Duration
-          duration: 600,
-          // Easing
-          easing: 'easeInExpo',
-          //Complete callback
-          complete: options.complete
-        });
-        
-        //Callback
-        $.isFunction( options.setup );
-      });
-    });
-  };
-}(jQuery));
-
-
-$('html').scrollAnchor({
-  offset: '170',
-});
 
 /** 
  * Load to Scroll
@@ -84,16 +30,33 @@ $('html').scrollAnchor({
         //Then, slow your roll son, load then scroll 
         setTimeout(function() {
         $('html, body').scrollTop(0).show();
-        $('html, body').animate({
-       //how about a touch of offset, cause I'm rockin' a fixed nav
-        scrollTop: $(window.location.hash).offset().top-settings.scrollOffset
-          }, settings.scrollSpeed, settings.easing);
+        $('html, body').stop().animate({
+          scrollTop: $(window.location.hash).offset().top-settings.scrollOffset
+        }, {
+            // Duration
+          duration: settings.scrollSpeed,
+          // Easing
+          easing: settings.scrollEasing,
+          //Complete callback
+          complete: loadThenScroll.headerEntrance
+        });
         }, settings.scrollDelay);
       }
-    }
+    },
+
+    /** 
+     * Make header visible after scroll interaction
+     */
+    headerEntrance: function(){
+      setTimeout(function() {
+        $('body').removeClass('scrolling-down').addClass('scrolling-up');
+      }, 400);
+    },
   }
 })();
-  loadThenScroll.init();
+
+loadThenScroll.init();
+
 })(jQuery);
 
 

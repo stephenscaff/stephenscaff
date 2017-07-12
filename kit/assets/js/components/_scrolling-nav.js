@@ -31,7 +31,7 @@
         if($('body').hasClass('scrolling-up') && (st <= 225)){
           $('body').addClass('close-to-top');
         }
-        if(st === 0) {
+        if(st === 50) {
           $('body').removeClass('scrolling-down scrolling-up close-to-top').addClass('at-top'); 
         }
 

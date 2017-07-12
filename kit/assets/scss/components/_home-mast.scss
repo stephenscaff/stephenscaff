@@ -18,11 +18,14 @@
     position: fixed;
     //background-image: linear-gradient( to bottom, #000, rgba($color-dark,0.1) 100%); 
   }
+
+  // Background
   &__bg{
     z-index: 0;
     @include bg-img-abs();
     animation: home-mast-bg-fade 2s 0.4s ease-in-out both;
   }
+
   // Bg Vid
   &__vid-wrap{
     z-index: 1;
@@ -39,6 +42,7 @@
     @include flex-row($align:center);
   }
 
+  // Columns
   &__col{
     @include flex-col(50%);
   }

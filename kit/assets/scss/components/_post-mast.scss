@@ -61,9 +61,20 @@
     line-height: 1.5;
 
     .has-bg &{
-      max-width: 16em;
+      max-width: 29em;
       margin: 0 auto;
     }
   }
+  br{
+    @media (max-width: $mq-med) {
+      display: none;
+    }
+  }
+}
+
+.post-img{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 

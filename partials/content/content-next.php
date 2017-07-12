@@ -16,7 +16,7 @@ $post_subtitle = get_field('post_subtitle', $next_post);
 if (is_singular('work'))  : ?>
 
 <article class="next next--work">
-  <a class="next__link" href="<?php echo the_permalink($next_post); ?>" data-bg-color="#fff">
+  <a class="next__link" href="<?php echo the_permalink($next_post); ?>">
     <div class="grid">
       <header class="next__header">
         <span class="next__pretitle">Read Next</span>

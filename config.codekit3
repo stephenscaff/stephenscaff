@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/404.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/404.php",
+		"oF": 0
+		},
 	"\/acf-json\/group_58a885fc2fde1.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -190,6 +196,38 @@
 		"oAP": "\/assets\/css\/fonts.min-min.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/assets\/images\/404\/404-1.gif": {
+		"ft": 4194304,
+		"iS": 21232,
+		"oA": 0,
+		"oAP": "\/assets\/images\/404\/404-1.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/404\/404-2.gif": {
+		"ft": 4194304,
+		"iS": 533299,
+		"oA": 0,
+		"oAP": "\/assets\/images\/404\/404-2.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/images\/404\/404-3.gif": {
+		"ft": 4194304,
+		"iS": 1881123,
+		"oA": 0,
+		"oAP": "\/assets\/images\/404\/404-3.gif",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/assets\/images\/404\/404-4.gif": {
+		"ft": 4194304,
+		"iS": 233836,
+		"oA": 0,
+		"oAP": "\/assets\/images\/404\/404-4.gif",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/assets\/images\/geo-ani-colors.gif": {
 		"ft": 4194304,
@@ -984,17 +1022,17 @@
 		"uL": 1
 		},
 	"\/inc\/admin\/admin-theme\/assets\/scss\/admin.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 5,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/inc\/admin\/admin-theme\/assets\/css\/admin.min.css",
-		"oF": 2,
-		"oS": 3,
-		"uL": 0
+		"oAP": "\/inc\/admin\/admin-theme\/assets\/css\/admin.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/inc\/admin\/admin-theme\/inc\/adminbar.php": {
 		"ft": 8192,
@@ -2719,6 +2757,18 @@
 		"oAP": "\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_content.scssc",
 		"oF": 0
 		},
+	"\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_fourohfour.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_fourohfour.scssc",
+		"oF": 0
+		},
+	"\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_gals.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_gals.scssc",
+		"oF": 0
+		},
 	"\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_home-mast.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -3055,19 +3105,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/kit\/assets\/scss\/components\/_code.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 5,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/kit\/assets\/scss\/css\/_code.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/kit\/assets\/scss\/components\/_codepens.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -3090,6 +3127,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/scss\/css\/_content.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/kit\/assets\/scss\/components\/_fourohfour.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 5,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/css\/_fourohfour.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

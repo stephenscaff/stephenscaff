@@ -24,6 +24,7 @@ $header-height-sm: 4em;
   }
 
   .scrolling-up &{
+    //transition: background-color 1s 0.4s ease;
     animation: nav-down ease-in-out .3s .1s both;
   }
 

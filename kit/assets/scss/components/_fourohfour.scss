@@ -1,0 +1,86 @@
+//----------------------------------------------
+//  Pagination
+//
+//  Previous/Next pagination pattern, rather 
+//  than by page numbers/groupings, ie 1,2,3...
+//  Also used for single post type navigation 
+//-----------------------------------------------
+
+.error404{
+  background-color: $color-black;
+  color: #fff;
+  @extend .theme-dark;
+   text-align: center;
+
+  .site-header, .site-footer{
+    display: none;
+  }
+}
+
+.fourohfour{
+  display: flex;
+  align-items:center;
+  min-height: 100vh;
+  padding: $pad 0;
+  background-color: $color-black;
+  color: $color-white;
+
+
+  &__content{
+    margin: -10% auto 0;
+    
+  }
+
+  &__figure{
+    position: relative;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: $color-black;
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+    max-width: 25em;
+    margin: 0 auto;
+    mix-blend-mode: lighten;
+    backface-visibility: hidden;
+    animation: fade-in 1s 0.75s ease both;
+  }
+
+
+  &__content{
+    animation: fade-in 2s 0.5s ease both;
+    @include engineGPU($hardware:true);
+  }
+  
+  &__title{
+    @extend %font-title-caps;
+    @include font-rwd(1.65em, 2.5em, 3em, 3.5em);
+
+    .js-letters span{
+    letter-spacing: 0.2em;
+
+      @media (min-width: $mq-med){
+        min-width: 1em;
+      }
+    }
+  }
+
+  &__subtitle{
+    @media (max-width: $mq-med){
+      font-size: 1.1em;
+    }
+  }
+
+
+  &__text{
+    animation: fade-in 2s 2.5s ease both;
+  }
+
+  .btn{
+    margin-top: 1em;
+    animation: fade-in 1.5s 2s ease both;
+  }
+}

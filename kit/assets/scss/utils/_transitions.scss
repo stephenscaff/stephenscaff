@@ -35,21 +35,23 @@ main{
   }
 
   // Sequentially fade shit out., 
-  article * + *,
+
   .work-promo__item * + *,
   .about-mast * + *,
+  .js-letters * + *,
+
+  .post,
   .next * + *,
-  .next .js-letters * + *,
-  .post, 
-  .work-feed,
-  .content p,
-  .gal .gal__img{
+  .post-mast__header * + *,
+  .content  * + *,
+  .mast__content * + *
+  .gal * + *{
     animation: fade-out 0.5s ease both;
-    @include nth-ani-delay(10, 0.1s);
+    @include nth-ani-delay(19, 0.1s);
   }
 
   // More Posts
-  .more-posts{
+  .more-posts, .next{
     animation: fade-out 0.5s 0.5s ease both;
   }
 }

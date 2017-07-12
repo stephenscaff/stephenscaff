@@ -1,19 +1,4 @@
-//----------------------------------------------
-//  Data-Scroll: No Js
-//  Fallback if no js
-//
-//  @see   js/vendor/waypoints.js
-//  @see   js/component/scroll-animations.js
-//  @group data-scroll
-//----------------------------------------------
-.no-js{
-  [data-scroll]{
-    opacity:1;
-  }
-  li{
-    opacity:1;
-  }
-}
+
 
 
 //----------------------------------------------
@@ -104,4 +89,21 @@
   &.is-animated .oh  span{
     opacity: 1;
   }
+}
+//----------------------------------------------
+//  Data-Scroll: No Js
+//  Fallback if no js
+//
+//  @see   js/vendor/waypoints.js
+//  @see   js/component/scroll-animations.js
+//  @group data-scroll
+//----------------------------------------------
+.no-js{
+  [data-scroll], [data-scroll-seq], li{
+    opacity:1 !important;
+  }
+}
+
+.js-no-mobile, [data-scroll].js-no-mobile{
+  opacity: 1 !important;
 }
