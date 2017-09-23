@@ -39,9 +39,8 @@ $preloader-hxw: 3em;
 // Has Image Preloader, fade in
 //----------------------------------------------
 .has-preloader{
-  //4background-color: rgba(#fff, 0.3);
 
-  & > img{
+  & [class*="img-wrap"]{
     opacity: 0;
     will-change: opacity;
     backface-visibility: hidden;
@@ -56,12 +55,11 @@ $preloader-hxw: 3em;
       opacity: 0;
       //transition: opacity 1s 0.3s ease-out;
     }
-    & img{
+    & [class*="img-wrap"]{
       opacity: 1;
-      //transition: opacity 1s 1s ease-in;
-      animation: fade-in 1s  0.75s ease both !important;
+      transition: opacity 1s ease-in;
+      //animation: fade-in 2s  0s ease both !important;
     }
   }
 }
-
 

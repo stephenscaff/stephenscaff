@@ -1,12 +1,42 @@
 //----------------------------------------------
-//  site-header
-//  Our main header element and navigations
-//
-//  @group site-header
+//  site-header - Setups
 //----------------------------------------------
 $header-height: 5em;
 $header-height-sm: 4em;
 
+// Color Theme Extends
+%header-dark{
+  color: #fff;
+  background-color: $color-transparent;
+}
+%header-dark-bg{
+  color: #fff;
+  background-color: $color-dark;
+}
+%header-light{
+  color: $color-dark;
+  background-color: $color-transparent;
+}
+%header-light-bg{
+  color: $color-dark;
+  background-color: $color-lightgrey;
+}
+
+// Animations
+@keyframes nav-down {
+  0%   { transform: translate3d(0,-$header-height,0); }
+  100% { transform: translateed(0,0,0); }
+}
+@keyframes nav-up {
+  0%   { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(0,-$header-height,0); }
+}
+
+
+//----------------------------------------------
+//  site-header
+//  Our main header element and navigations
+//----------------------------------------------
 .site-header {
   z-index: 9;
   position: fixed;
@@ -14,17 +44,16 @@ $header-height-sm: 4em;
   display: block;
   width: 100%;
   padding: 1em 0;
-  color: $color-white;
   background-color: rgba(0,0,0,0);
   transition: background-color 0.5s ease;
   @include engineGPU('position');
 
   .scrolling-down &{
+    transition: background-color 0.5s 0.5s ease, color 0.5s 0.5s ease;
     animation: nav-up ease-in-out .3s .1s both;
   }
 
   .scrolling-up &{
-    //transition: background-color 1s 0.4s ease;
     animation: nav-down ease-in-out .3s .1s both;
   }
 
@@ -32,37 +61,8 @@ $header-height-sm: 4em;
     opacity: 0;
     transition: opacity 0.75s 0.5s ease;
   }
-
-  .scrolling-down &, .scrolling-up &{
-    background: $color-dark;
-    color: #fff;
-
-    .is-exiting &{
-      background-color: rgba(0,0,0,0);
-      transition: background-color 0.7s ease;
-    }
-  }
-
-
-  .theme-light &{
-    color: $color-dark;
-    background-color: $color-lightgrey;
-  }
-
-  .theme-dark-light.scrolling-down &, 
-  .theme-dark-light.scrolling-up &{
-    background: $color-lightgrey;
-    color: $color-dark;
-  }
-
-
-  body.close-to-top &,
-  body.scrolling-up.close-to-top &, 
-  body.at-top &{
-    background-color: rgba(0,0,0,0);
-  }
-
   
+  // Container
   &__grid{
     position: relative;
     display: flex;
@@ -99,10 +99,11 @@ $header-height-sm: 4em;
 
     a{
       opacity: 0;
-      @include link-nav();
       margin-left: 1em;
       padding: 0 0.1em;
       text-transform: lowercase;
+      line-height: 2;
+      @include link-nav();
 
       .is-exiting &, .is-loaded.is-exiting &{
         opacity: 0;
@@ -120,11 +121,34 @@ $header-height-sm: 4em;
   }
 }
 
-@keyframes nav-down {
-  0%   { transform: translate3d(0,-$header-height,0); }
-  100% { transform: translateed(0,0,0); }
+
+.theme-dark, .page-blog{
+  .site-header{
+    @extend %header-dark;
+  }
+  &.scrolling-up .site-header,
+  &.scrolling-down .site-header{
+    @extend %header-dark-bg;
+  }
 }
-@keyframes nav-up {
-  0%   { transform: translate3d(0,0,0); }
-  100% { transform: translate3d(0,-$header-height,0); }
+
+
+.theme-light{
+  .site-header{
+    @extend %header-light;
+  }
+  &.scrolling-up .site-header,
+  &.scrolling-down .site-header{
+    @extend %header-light-bg;
+  }
+}
+
+.theme-dark-light{
+  .site-header{
+    @extend %header-dark;
+  }
+  &.scrolling-up .site-header,
+  &.scrolling-down .site-header{
+    @extend %header-light-bg;
+  }
 }

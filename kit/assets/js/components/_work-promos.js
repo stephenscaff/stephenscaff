@@ -50,6 +50,7 @@
         //s.promoTrans.toggleClass('is-transitioning');
         //s.promoImg.hide();
         $('.js-promo-bg:nth-child(' + index + ')').toggleClass('is-visible').fadeIn('300');
+        $('.js-promo').toggleClass('is-hovering');
       }
     },
   };

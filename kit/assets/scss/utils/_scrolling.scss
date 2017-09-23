@@ -47,6 +47,21 @@
 }
 
 
+[data-load="stagger-in-delayed"]{
+ will-change: opacity, transform;
+
+  .oh span{
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 3s ease;
+    @include nth-trans-delay(30,0.1935s);
+  }
+  &.is-animated .oh  span{
+    opacity: 1;
+  }
+}
+
+
 //----------------------------------------------
 //  Data-Scroll : Stagger In Fast
 //  A sequential fade in for child nodes

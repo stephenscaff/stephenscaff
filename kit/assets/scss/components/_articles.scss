@@ -38,11 +38,11 @@
   &__bg{
     @include bg-img-abs();
      opacity: 0;
-     transition: opacity 1.5s ease-in-out;
+     transition: opacity 1s ease-in-out;
 
     &.is-visible{
       opacity: 0.8;
-      transition: opacity 1.5s 0s ease-in-out;
+      transition: opacity 1s 0s ease-in-out;
     }
     &.is-visible-start{
       opacity: 0.8

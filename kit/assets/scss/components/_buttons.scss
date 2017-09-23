@@ -37,6 +37,9 @@
   @include link-lines($color: $color-dark, $line_color: $color-dark, $hover_color: #fff);
 }
 
+//---------------------------------------------- 
+//  Btn-Arrow
+//----------------------------------------------
 .btn-arrow {
   @extend %btn-theme;
   padding: 0em 3em 0em 0;
@@ -87,5 +90,37 @@
 
   &:hover{
     color: $color-alpha;
+  }
+}
+
+
+//---------------------------------------------- 
+//  Btn-View (on posts)
+//----------------------------------------------
+.btn-view{
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  overflow: hidden;
+
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color-alpha;
+    transform: translate3d(115%,0,0);
+    transition: transform 0.5s $ease-cb-2;
+  }
+
+  &:after{
+
+    a:hover &{
+      transform: translate3d(-75%,0,0);
+      transition: transform 0.6s 0.2s $ease-cb-2;
+      //transition-delay: 0.5s;
+    }
   }
 }

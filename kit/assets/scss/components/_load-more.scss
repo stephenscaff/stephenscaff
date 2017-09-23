@@ -1,0 +1,40 @@
+//----------------------------------------------
+//  Gal
+//  Styles for the gallery module, that offers
+//  a series of images at full or half width.
+//
+//  @group gal
+//-----------------------------------------------
+
+.load-more{
+  position: relative;
+  &__link{
+    position: relative;
+    display: block;
+    padding: $pad-sm 0;
+    background-color: $color-dark;
+    color: #fff;
+    transition: background-color 1.5s ease;
+    text-align: center;
+
+    &:hover{
+      color: #fff;
+      background-color: $color-alpha;
+      transition: background-color 1.5s ease;
+    }
+  }
+
+  &__preloader{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &.is-hidden{
+    animation: fade-out 2s ease forwards;
+  }
+
+  &.is-animating{
+    .load-more__preloader{
+      opacity: 1;
+    }
+  }
+}

@@ -229,6 +229,386 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/assets\/images\/favicons\/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 17214,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/android-chrome-512x512.png": {
+		"ft": 32768,
+		"iS": 65299,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/android-chrome-512x512.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 15587,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/browserconfig.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/images\/favicons\/browserconfig.xml",
+		"oF": 0
+		},
+	"\/assets\/images\/favicons\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 825,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1700,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/images\/favicons\/favicon.ico",
+		"oF": 0
+		},
+	"\/assets\/images\/favicons\/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/assets\/images\/favicons\/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/assets\/images\/favicons\/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 9129,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favicons\/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favicons\/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/favicons\/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/favs\/android-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 24613,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/android-icon-192x192.png": {
+		"ft": 32768,
+		"iS": 30799,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/android-icon-36x36.png": {
+		"ft": 32768,
+		"iS": 3397,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-36x36.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/android-icon-48x48.png": {
+		"ft": 32768,
+		"iS": 5005,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-48x48.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/android-icon-72x72.png": {
+		"ft": 32768,
+		"iS": 8934,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/android-icon-96x96.png": {
+		"ft": 32768,
+		"iS": 13193,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/android-icon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-114x114.png": {
+		"ft": 32768,
+		"iS": 17480,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-114x114.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-120x120.png": {
+		"ft": 32768,
+		"iS": 19055,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-120x120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 24613,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-152x152.png": {
+		"ft": 32768,
+		"iS": 27277,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-180x180.png": {
+		"ft": 32768,
+		"iS": 35003,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-180x180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-57x57.png": {
+		"ft": 32768,
+		"iS": 6272,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-57x57.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-60x60.png": {
+		"ft": 32768,
+		"iS": 6845,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-60x60.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-72x72.png": {
+		"ft": 32768,
+		"iS": 8934,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-76x76.png": {
+		"ft": 32768,
+		"iS": 9581,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-76x76.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 31373,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/apple-icon.png": {
+		"ft": 32768,
+		"iS": 31373,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/apple-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/browserconfig.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/images\/favs\/browserconfig.xml",
+		"oF": 0
+		},
+	"\/assets\/images\/favs\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1678,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 2916,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/favicon-96x96.png": {
+		"ft": 32768,
+		"iS": 13193,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/favicon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/images\/favs\/favicon.ico",
+		"oF": 0
+		},
+	"\/assets\/images\/favs\/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/assets\/images\/favs\/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/assets\/images\/favs\/ms-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 24613,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/ms-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/ms-icon-150x150.png": {
+		"ft": 32768,
+		"iS": 26522,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/ms-icon-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/ms-icon-310x310.png": {
+		"ft": 32768,
+		"iS": 79371,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/ms-icon-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/favs\/ms-icon-70x70.png": {
+		"ft": 32768,
+		"iS": 8447,
+		"oA": 0,
+		"oAP": "\/assets\/images\/favs\/ms-icon-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/images\/geo-ani-colors.gif": {
 		"ft": 4194304,
 		"iS": 63068,
@@ -1227,6 +1607,15 @@
 		"oAP": "\/inc\/load-more\/load-more.php",
 		"oF": 0
 		},
+	"\/inc\/load-more\/min\/load-more-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/load-more\/min\/min\/load-more-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/inc\/loaders\/includes.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1481,6 +1870,15 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/js\/vendor\/min\/_feature-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/kit\/assets\/js\/vendor\/_inline-video.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/js\/vendor\/min\/_inline-video-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2781,6 +3179,12 @@
 		"oAP": "\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_img-cols.scssc",
 		"oF": 0
 		},
+	"\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_load-more.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_load-more.scssc",
+		"oF": 0
+		},
 	"\/kit\/assets\/scss\/.sass-cache\/e58fa282dceb76683dd9bbf8f980f29da6f94420\/_masts.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -3192,6 +3596,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/kit\/assets\/scss\/css\/_intros.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/kit\/assets\/scss\/components\/_load-more.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 5,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/kit\/assets\/scss\/css\/_load-more.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -4040,6 +4457,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/home.php",
+		"oF": 0
+		},
+	"\/templates\/posts.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/posts.php",
 		"oF": 0
 		},
 	"\/velo-slider.html": {

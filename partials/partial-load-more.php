@@ -16,10 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
 <section class="load-more">
-  <div class="grid">
-    <a id="js-load-more" class="load-more__link" href="#">
-      <span class="btn-line">More Posts</span>
-      <span class="load-more__preloader"><span class="preloader preloader--load-more"></span></span>
-    </a>
-  </div>
+  <a id="js-load-more" class="load-more__link" href="#">
+    <span class="load-more__btn btn-white">Keep Reading</span>
+    <span class="load-more__preloader"><span class="preloader preloader--load-more"></span></span>
+  </a>
 </section>

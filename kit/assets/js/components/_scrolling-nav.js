@@ -1,7 +1,3 @@
-/**
- * Detect Scolling direction
- *
- */
 (function($) {
   scrollDirection = {
     
@@ -31,7 +27,7 @@
         if($('body').hasClass('scrolling-up') && (st <= 225)){
           $('body').addClass('close-to-top');
         }
-        if(st === 50) {
+        if(st <= 0) {
           $('body').removeClass('scrolling-down scrolling-up close-to-top').addClass('at-top'); 
         }
 
@@ -48,5 +44,3 @@
   };
   scrollDirection.init();
 })(jQuery);
-
-

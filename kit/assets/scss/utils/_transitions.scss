@@ -14,12 +14,6 @@ main{
   background-color: $color-lightgrey;
 }
 
-.theme-dark{
-  main{
-    background-color: $color-dark;
-  }
-}
-
 
 //----------------------------------------------
 //  Is Exiting Page
@@ -27,11 +21,14 @@ main{
 
 .is-exiting{
 
-  // Footer, when and if we rock one
   main, .site-footer{  
     animation: fade-out 1s 0.5s ease both;
     //opacity: 0;
     //transition: 0.5s 0.5s ease-in-out;
+  }
+
+  &.single-work article, &.single-work .post-footer{
+    animation: fade-out 1.5s ease both;
   }
 
   // Sequentially fade shit out., 
@@ -39,7 +36,6 @@ main{
   .work-promo__item * + *,
   .about-mast * + *,
   .js-letters * + *,
-
   .post,
   .next * + *,
   .post-mast__header * + *,

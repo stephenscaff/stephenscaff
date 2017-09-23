@@ -50,7 +50,7 @@ class ScriptStyleLoader{
       
       wp_enqueue_script( 'jquery' );
       wp_enqueue_script( self::JUMPOFF_JS);
-      // Post Pages
+      //Post Pages
       if (is_single() ){
         wp_enqueue_script( 'post_js' );
       }
@@ -81,14 +81,3 @@ class ScriptStyleLoader{
 }
 
 new ScriptStyleLoader;
-
-/**
- * Removes cf7 scripts / styles for all but contact page
- */
-function jumpoff_cf7_dequeue() {
-	if ( !is_page( array( 'contact' ) ) ) {
-		wp_dequeue_script( 'contact-form-7' );
-		wp_dequeue_style( 'contact-form-7' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'jumpoff_cf7_dequeue', 99 ); 

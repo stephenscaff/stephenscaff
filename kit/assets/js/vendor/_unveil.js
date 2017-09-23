@@ -28,13 +28,10 @@
           this.parentElement.classList.add('is-loaded');
         } else {
           this.style.backgroundImage  = 'url('+source+')';
-          //this.classList.add('is-loaded');
           this.parentElement.classList.add('is-loaded');
-          this.parentElement.classList.add('is-animated');
         }
         if (this.classList === 'js-scroll'){
-          console.log('lsadfksdjfksdf');
-          this.parentElement.classList.add('is-adnimated');
+
         }
         if (typeof callback === "function") { callback.call(this); }
       }

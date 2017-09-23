@@ -18,13 +18,20 @@
     width: 100%;
     top: 0;
     left: 0;
+    opacity: 0.4;
+    transition: opacity 1s ease;
+
+    .is-hovering &{
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
 
     &:after{
       @include pseudo-el(0);
       transition: opacity 2.5s ease-in-out;
       //background: radial-gradient(ellipse at center, rgba($color-dark,0.4) 10%, rgba($color-dark,0.9) 60%);
       background: rgba($color-dark, 0.7);
-      transition: background 1s ease;
+      transition: background 0.4s ease;
 
       .is-hovering &{
          //background: radial-gradient(ellipse at center, rgba($color-dark,0.1) 60%, rgba($color-dark,1) 50%);
@@ -62,6 +69,13 @@
 
   &__items{
     @include flex-grid(1, 2, $pad: 0.5em);
+  }
+
+  &__items--social{
+    @media (max-width: $mq-med) {
+      flex-basis: 50%;
+      width: 50%;
+    }
   }
 
   &__item{

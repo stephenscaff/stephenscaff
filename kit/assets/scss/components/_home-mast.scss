@@ -12,10 +12,12 @@
   padding: 8em 0;
   color: #fff;
   background-color: $color-dark;
+  pointer-events:none;
 
   &:after{
     @include pseudo-el(3);
-    position: fixed;
+    position: absolute;
+    //background-image: linear-gradient(to top, rgba($color-dark, 0.4) 20%, rgba(0,0,0,0));
     //background-image: linear-gradient( to bottom, #000, rgba($color-dark,0.1) 100%); 
   }
 
@@ -29,9 +31,9 @@
   // Bg Vid
   &__vid-wrap{
     z-index: 1;
-    @include bg-vid($opacity: 1, $reveal-amount: 0.3);
+    @include bg-vid($opacity: 1, $reveal-amount: 0.7);
     @media (max-width: $mq-med) {
-      display: none;
+      //display: none;
     }
   }
  
@@ -68,9 +70,12 @@
     //max-width: 8em;
     @extend %font-title-caps;
     @include font-rwd($font-h1, 2.8em, 3em, 3.5em);
+    margin: 0;
 
     .js-letters span{
       min-width: 1em;
+      //opacity: 0;
+      display: inline-block;
 
       @media (min-width: $mq-med){
         min-width: 1.5em;
@@ -90,7 +95,7 @@
     border: 0;
     height: 0.2em;
     width: 0;
-    margin: 0 0 3em;
+    margin: 1em 0 2em;
     background-color: #fff;
 
     .is-loaded &{

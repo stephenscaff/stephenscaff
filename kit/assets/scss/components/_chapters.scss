@@ -31,7 +31,11 @@
   }
 
   &__header, &__content{
-    padding: $pad 0 $pad-sm;
+    padding: $pad-sm 0 1em;
+
+    @media (min-width: $mq-med) {
+      padding: $pad 0 $pad-sm;
+    }
   }
 
   &__header{

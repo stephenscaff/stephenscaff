@@ -23,6 +23,9 @@
       @media (min-width: $mq-med){
         padding: 2em;
       }
+      @media (max-width: $mq-med) {
+        width: 100%;
+      }
     }
   }
 }
@@ -51,6 +54,10 @@
   .screenshots--browser & .has-bg{
     display: block;
     padding: 3.5vw;
+
+    @media (min-width: $mq-large){
+      padding: 4.5vw;
+    }
   }
 }
 
@@ -246,6 +253,7 @@
 .screenshot__phone{
   position: relative;
   max-width: 13.5em;
+  
   padding: 3em 0.5em;
   background: #fff;
   border: 1px solid rgba(255,255,255,0.8);

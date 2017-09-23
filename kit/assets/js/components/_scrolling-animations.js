@@ -14,6 +14,7 @@ var ScrollSequencer = (function() {
   return {
 
     init: function(){
+
       this.scrollTrigger();
     },
 
@@ -64,8 +65,6 @@ var ScrollSequencer = (function() {
 ScrollSequencer.init();
 
 
-
-
 /** 
  * Scrolling ANimations
  * A waypoints.js extension for animating of data attributes.
@@ -93,3 +92,33 @@ ScrollSequencer.init();
 };
 ScrollDetect.init();
 })(jQuery);
+
+
+
+var AnimationDelay = (function(){
+  var body = document.querySelectorAll('body');
+   var aniTriggers = document.querySelectorAll('[data-ani-delay]');
+   //var delayTime = document.querySelectorAll('[data-ani-delay]');
+
+  return{
+    init: function(){
+      this.startAnimation();
+    },
+
+    startAnimation: function() {
+      console.log(aniTriggers);
+      Array.from(aniTriggers).forEach(function (aniTrigger) {
+
+        console.log(aniTrigger);
+        var delayTime = aniTrigger.dataset.aniDelay;
+        console.log(delayTime);
+        setTimeout(function() {
+          aniTrigger.classList.add('is-animated')
+        }, delayTime);
+      });
+    },
+  };
+})();
+AnimationDelay.init();
+
+

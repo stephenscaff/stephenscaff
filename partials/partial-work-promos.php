@@ -83,7 +83,7 @@ $dribbble = get_field('dribbble', 'option');
         <!-- Socials -->
         <h3 class="work-promo__heading" data-scroll="">Socials</h3>
         
-        <div class="work-promo__items js-scroll" data-scroll-seq="article" data-scroll-offset="90%">
+        <div class="work-promo__items work-promo__items--social js-scroll" data-scroll-seq="article" data-scroll-offset="90%">
           <article class="work-promo__item js-article-link">
             <a class="work-promo__link" href="<?php echo $github; ?>"><span class="work-promo__name oh"><span class="js-letters">Github</span></span></a>
           </article>

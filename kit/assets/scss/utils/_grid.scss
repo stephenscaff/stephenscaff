@@ -36,6 +36,7 @@
 .grid-med {
   @extend %grid;
   @media (min-width: $mq-large){
+    width: 85%;
     max-width: $grid-max-width-med;
   }
 }

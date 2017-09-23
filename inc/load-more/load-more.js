@@ -11,11 +11,11 @@ jQuery(document).ready(function( $ ) {
       nextLink: wpLoadMore.nextLink,
       pageNum:parseInt(wpLoadMore.startPage) + 1,
       maxPages: parseInt(wpLoadMore.maxPages),
-      postsContainer: ("#js-posts"),
+      postsContainer: (".js-posts"),
       linkContainer: $(".load-more"),
       link: $("#js-load-more"),
-      linkButton: $("#js-load-more .btn"),
-      linkText: "Keep Reading",
+      linkButton: $("#js-load-more .load-more__btn"),
+      linkText: "Whoa",
       linkLoadingText: 'Loading...',
     },
 
@@ -86,7 +86,7 @@ jQuery(document).ready(function( $ ) {
      */
     animateLoader: function(){
       s.linkContainer.addClass('is-animating');
-      s.linkButton.text('loading...');
+      s.linkButton.text('Weeeeeee!');
     },
 
     /**

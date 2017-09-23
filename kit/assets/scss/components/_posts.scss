@@ -5,6 +5,10 @@
   &__grid{
     @include flex-grid(1, 2, $pad: 2em);
     //@include flex-grid-animation(1, 2, 2, 2);
+
+    @media (max-width: $mq-med) {
+      margin-top: -2em;
+    }
   }
 }
 
@@ -36,6 +40,9 @@
     }
   }
 
+  &__img-wrap{
+    display: block;
+  }
   &__img{
     display: block;
     width: 100%;
@@ -104,6 +111,12 @@
   &__text{
     margin: 1em 0 1.5em;
     font-size: $font-xsmall;
+    transition: color 0.75s ease;
+
+    &:hover &, a:hover &{
+      color: rgba(#fff, 0.85);
+      transition: color 0.75s ease;
+    }
 
     .theme-dark &{
       color: $color-light;

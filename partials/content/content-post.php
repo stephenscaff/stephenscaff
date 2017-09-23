@@ -13,7 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <article class="post">
   <a class="post__link" href="<?php the_permalink(); ?>">
     <figure class="post__figure has-preloader">
-      <img class="post__img js-lazy" data-src="<?php echo jumpoff_ft_img('large'); ?>">
+      <span class="post__img-wrap">
+        <img class="post__img js-lazy" data-src="<?php echo jumpoff_ft_img('large'); ?>">
+      </span>
       <span class="preloader"></span>
     </figure>
     <header class="post__header" data-scroll="stagger-in">

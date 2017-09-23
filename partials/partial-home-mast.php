@@ -29,21 +29,20 @@ $hm_bg_img = get_field('hm_bg_img');
 </style>
 <!-- Home Mast -->
 <section class="home-mast">
-<figure class="home-mast__bg"></figure>
-<?php if ($hm_vid && !wp_is_mobile()) : ?>
+<!-- <figure class="home-mast__bg"></figure> -->
+
   <figure class="home-mast__vid-wrap bg-vid">
-    <span class="vid-cover"></span>
-    <video class="home-mast__vid bg-vid__video" autoplay="" loop="" muted="" poster="" playsinline="">
+    <video class="home-mast__vid bg-vid__video js-bg-vid" autoplay="" loop="" muted="" poster="" playsinline="">
       <source type="video/mp4" src="<?php echo $hm_vid['url']; ?>">
     </video>
   </figure>
-<?php endif; ?>
+
   
   <div class="grid-lg">
   <section class="home-mast__content">
     <header class="home-mast__header">
       <?php if ($hm_title): ?>
-      <h1 class="home-mast__title" data-load="stagger-in-slow">
+      <h1 class="home-mast__title" data-load="stagger-in-delayed" data-ani-delay="100">
         <span class="oh"><span class="js-letters">The</span></span> <br/>
         <span class="oh"><span class="js-letters">Name Is</span></span><br/>
         <span class="oh"><span class="js-letters">Stephen</span></span><br/>

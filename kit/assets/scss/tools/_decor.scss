@@ -17,9 +17,12 @@
 //  Image Crispter
 //----------------------------------------------
 @mixin img-crisper{
-  image-rendering: -moz-crisp-edges;        
-  image-rendering:   -o-crisp-edges;         
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;  
+  // image-rendering: -moz-crisp-edges;        
+  // image-rendering:   -o-crisp-edges;         
+  // image-rendering: crisp-edges;
+  // -ms-interpolation-mode: nearest-neighbor;  
+
+  @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    image-rendering: -webkit-optimize-contrast;
+  }
 }

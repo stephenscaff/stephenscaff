@@ -45,6 +45,8 @@ $linkedin_handle = get_field('linkedin_handle', 'option');
 
 <!-- Le javascript --> 
 <?php wp_footer(); ?>
-
+<script type="text/javascript">
+  
+</script>
 </body>
 </html>
