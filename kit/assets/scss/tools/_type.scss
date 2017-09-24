@@ -62,9 +62,15 @@
 //  @param: $font_lg  - at Large break
 //  @param: $font_xl  - at Xlarge break  
 //----------------------------------------------
-@mixin font-rwd($sm:null, $med:null, $lg:null, $xl:null, $xxl:null) {
-  font-size: $sm;
+@mixin font-rwd($base:null, $sm:null, $med:null, $lg:null, $xl:null, $xxl:null) {
+  font-size: $base;
   
+  @if $sm {
+    @media(min-width: $mq-small){
+      font-size: $sm;
+    }
+  }
+
   @if $med {
     @media(min-width: $mq-med){
       font-size: $med;

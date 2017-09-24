@@ -707,11 +707,11 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/assets\/js\/post.min.js": {
+	"\/assets\/js\/posts.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/min\/post.min-min.js",
+		"oAP": "\/assets\/js\/min\/posts.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

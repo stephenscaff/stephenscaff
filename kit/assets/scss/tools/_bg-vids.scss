@@ -16,10 +16,8 @@
   @include bg_overlay($color-dark, 1);
 
   &:after{
-    animation: vid-reveal 2s 3s ease-in-out both;
+    animation: vid-reveal 2s 2s ease-in-out both;
   }
-
-
 
   video{
     z-index: 0;
@@ -50,7 +48,7 @@
 //  Hide ios added play button
 //-----------------------------------------------
 .IIV::-webkit-media-controls-play-button,
- .IIV::-webkit-media-controls-start-playback-button {
+.IIV::-webkit-media-controls-start-playback-button {
    opacity: 0;
    pointer-events: none;
    width: 0;

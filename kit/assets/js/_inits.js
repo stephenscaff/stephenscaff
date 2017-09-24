@@ -28,7 +28,9 @@ var site = {
     enableInlineVideo(video, {
       iPad: true
     });
-    setTimeout(function () { video.play(); }, 1000);
+    // setTimeout(function () { 
+    //   video.play(); 
+    // }, 1000);
   },
 
   /**
@@ -58,7 +60,8 @@ $(function(){
   if ( $('.js-lazy').length ){
     site.lazy();
   }
-  if ( $('js-bg-vid').length ) {
+  if ( $('.js-bg-vid').length ) {
     site.mobileBgVid();
   }
 });
+

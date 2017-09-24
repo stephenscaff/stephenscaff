@@ -31,9 +31,9 @@
   // Bg Vid
   &__vid-wrap{
     z-index: 1;
-    @include bg-vid($opacity: 1, $reveal-amount: 0.7);
-    @media (max-width: $mq-med) {
-      //display: none;
+    @include bg-vid($opacity: 1, $reveal-amount: 0.4);
+    @media (min-width: $mq-med) {
+      @include bg-vid($opacity: 1, $reveal-amount: 0.65);
     }
   }
  
@@ -46,7 +46,7 @@
 
   // Columns
   &__col{
-    @include flex-col(50%);
+    //@include flex-col(50%);
   }
 
   // For Single Col Layout
@@ -54,9 +54,18 @@
     z-index: 4;
     position: relative;
     margin: 0 auto;
-    @include flex-col(70%);
 
-    @media (min-width: $mq-med){
+    
+    @media (min-width: $mq-small) {
+      margin-left: 15%;
+    }
+
+    @media (min-width: $mq-med) {
+      max-width: 70%;
+      margin-left: 25%;
+    }
+
+    @media (min-width: $mq-large){
       margin-left: 30%;
     }
   }
@@ -69,7 +78,7 @@
   &__title{
     //max-width: 8em;
     @extend %font-title-caps;
-    @include font-rwd($font-h1, 2.8em, 3em, 3.5em);
+    @include font-rwd(2.5em, 3em, 3em, 3.25em, 3.5em);
     margin: 0;
 
     .js-letters span{
@@ -88,6 +97,10 @@
     font-family: $font-sans;
     font-size: $font-small;
     max-width: 34em;
+
+    @media (min-width: $mq-med) {
+      max-width: 40em;
+    }
   }
 
   &__sep{

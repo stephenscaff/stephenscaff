@@ -20,6 +20,10 @@ $header-height-sm: 4em;
 %header-light-bg{
   color: $color-dark;
   background-color: $color-lightgrey;
+
+  .site-header__logo{
+    @include link-styles($color-dark, $color-grey);
+  }
 }
 
 // Animations
