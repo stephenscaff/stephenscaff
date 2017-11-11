@@ -35,7 +35,7 @@
     @include aspect_ratio(1500, 900 );
     overflow: hidden;
 
-    .post__link:hover &{
+    .post__link:hover &, .post_link:active &, .post__link:focus &{
       transform: scale(.97);
     }
   }
@@ -113,7 +113,7 @@
     font-size: $font-xsmall;
     transition: color 0.75s ease;
 
-    &:hover &, a:hover &{
+    &:hover &, a:hover &, a:active &, &:focus a{
       color: rgba(#fff, 0.85);
       transition: color 0.75s ease;
     }

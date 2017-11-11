@@ -44,9 +44,14 @@
     opacity: 0.5;
     @include flex-col(30%);
 
-    @media (min-width: $mq-med){
+    @media (min-width: $mq-med) and (max-width: $mq-large){
       @include pseudo-border($width:3em);
       left: -1.15%;
+      @include flex-col($h-mast-margin-left-med);
+    }
+
+    @media (min-width: $mq-large) and (max-width: $mq-xlarge){
+      @include flex-col($h-mast-margin-left-lg);
     }
   }
 
@@ -55,6 +60,18 @@
     position: relative;
     @include flex-col(70%);
     @include pseudo-border();
+
+    @media (min-width: $mq-large) and (max-width: $mq-xlarge){
+      @include flex-col(100%-$h-mast-margin-left-med);
+    }
+
+    @media (min-width: $mq-large) and (max-width: $mq-xlarge){
+      @include flex-col(100%-$h-mast-margin-left-lg);
+    }
+
+    @media (min-width: $mq-large) {
+      //margin-left: ;
+    }
   }
 
   &__title{

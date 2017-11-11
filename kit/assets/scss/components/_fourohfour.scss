@@ -1,9 +1,9 @@
 //----------------------------------------------
 //  Pagination
 //
-//  Previous/Next pagination pattern, rather 
+//  Previous/Next pagination pattern, rather
 //  than by page numbers/groupings, ie 1,2,3...
-//  Also used for single post type navigation 
+//  Also used for single post type navigation
 //-----------------------------------------------
 
 .error404{
@@ -14,6 +14,10 @@
 
   .site-header, .site-footer{
     display: none;
+  }
+
+  main {
+    background-color: $color-black;
   }
 }
 
@@ -28,7 +32,7 @@
 
   &__content{
     margin: -10% auto 0;
-    
+
   }
 
   &__figure{
@@ -54,7 +58,7 @@
     animation: fade-in 2s 0.5s ease both;
     @include engineGPU($hardware:true);
   }
-  
+
   &__title{
     @extend %font-title-caps;
     @include font-rwd(1.65em, 2.5em, 3em, 3.5em);

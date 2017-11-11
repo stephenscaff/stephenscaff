@@ -13,18 +13,18 @@ body {
 //----------------------------------------------
 body {
   font-size: 100%;
-  
+
   @media (min-width: $mq-small) {
-    font-size: 102%;
+    font-size: 101%;
   }
   @media (min-width: $mq-med) {
-    font-size: 103%;
+    font-size: 102%;
   }
   @media (min-width: $mq-large) {
-    font-size: 107%;
+    font-size: 100%;
   }
   @media (min-width: 75em) {
-    font-size: 110%;
+    font-size: 107%;
   }
   @media (min-width: $mq-xlarge) {
     font-size: 112%;
@@ -59,12 +59,12 @@ h1, h2, h3 , h4, h5, h6 {
 //  h1
 //  @group  typography
 //----------------------------------------------
-%font-h1, 
+%font-h1,
 h1 {
   margin-bottom: .25em;
   font-size: $font-h1;
   line-height: 1.25;
-  
+
   @media (min-width: $mq-xlarge) {
     font-size: $font-h1 + $font-scale-up;
   }
@@ -76,7 +76,7 @@ h1 {
 %font-h2,
 h2 {
   margin-bottom: .25em;
-  font-size: $font-h2;  
+  font-size: $font-h2;
   line-height: 1.2;
 
   @media (min-width: $mq-xlarge) {
@@ -90,7 +90,7 @@ h2 {
 %font-h3,
 h3 {
   margin-bottom: .6em;
-  font-size: $font-h3;  
+  font-size: $font-h3;
   line-height: 1.3;
 
   @media (min-width: $mq-xlarge) {
@@ -104,7 +104,7 @@ h3 {
 %font-h4,
 h4 {
   margin-bottom: .5em;
-  font-size: $font-h4;;  
+  font-size: $font-h4;;
   line-height: 1.4;
 
   @media (min-width: $mq-xlarge) {
@@ -118,7 +118,7 @@ h4 {
 %font-h5,
 h5 {
   margin-bottom: .4em;
-  font-size: $font-h5;  
+  font-size: $font-h5;
   line-height: 1.4;
 }
 
@@ -189,4 +189,3 @@ cite {
   background: $color-alpha;
   text-shadow: none;
 }
-

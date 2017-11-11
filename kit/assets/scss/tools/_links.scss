@@ -60,7 +60,7 @@
     color: $hover_color !important;
     transition: color 0.4s ease-in-out;
   }
-  &:hover, a:hover &{
+  &:hover, a:hover &, a:active &, a:focus &{
     &:before, &:after{
       transition: transform 0.6s $ease-cb-2, color 0.6s $ease-cb-2;
     }
@@ -102,10 +102,10 @@
     transform: translate3d(-110%, 0%, 0);
     transition: transform 0.6s $ease-cb-2;
   }
-  &:hover, &:focus{
+  &:hover, &:active, &:focus{
     cursor: pointer; 
   }
-  &:hover:after, &.is-active:after{
+  &:hover:after, &:focus:after, &:active &, &.is-active:after{
     //transform: translateX(0);
     transform: translate3d(0, -90%, 0);
     transition: transform 0.6s $ease-cb-2, color 0.6s ease-in-out;
