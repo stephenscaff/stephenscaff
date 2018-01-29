@@ -5,18 +5,18 @@
  * Global Site inits
  */
 var site = {
-  
+
   /**
    * Featured Init
    */
   featureJS: function(){
-    //no-js 
+    //no-js
     $("html").removeClass("no-js");
-    //no-svg 
+    //no-svg
     if (!feature.svg) {
       $("html").addClass("no-svg");
     }
-    //no-flexbox 
+    //no-flexbox
     if (!feature.cssFlexbox) {
       $("html").addClass("no-flexbox");
     }
@@ -28,9 +28,6 @@ var site = {
     enableInlineVideo(video, {
       iPad: true
     });
-    // setTimeout(function () { 
-    //   video.play(); 
-    // }, 1000);
   },
 
   /**
@@ -61,7 +58,6 @@ $(function(){
     site.lazy();
   }
   if ( $('.js-bg-vid').length ) {
-    site.mobileBgVid();
+    //site.mobileBgVid();
   }
 });
-

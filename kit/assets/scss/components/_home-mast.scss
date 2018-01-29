@@ -8,67 +8,79 @@
   position: relative;
   display: flex;
   align-items:center;
-  min-height: 100vh;
+  height: 40em;
+  max-height: 100vh;
   padding: 8em 0;
   color: #fff;
   background-color: $color-dark;
-  pointer-events:none;
+
+  @media (min-width: $mq-med) {
+    height: 100vh;
+    max-height: 100vh;
+  }
 
   &:after{
-    @include pseudo-el(3);
-    position: absolute;
-    //background-image: linear-gradient(to top, rgba($color-dark, 0.4) 20%, rgba(0,0,0,0));
-    //background-image: linear-gradient( to bottom, #000, rgba($color-dark,0.1) 100%);
+    //@include pseudo-el(3);
+    //position: absolute;
   }
+
 
   // Background
   &__bg{
-    z-index: 0;
-    @include bg-img-abs();
-    animation: home-mast-bg-fade 2s 0.4s ease-in-out both;
-  }
+    @include bg-img-abs(1);
+    background-position: left;
+    background-color: $color-dark;
+    pointer-events:none;
+    transition: opacity 4s 2s ease;
+    opacity: 0;
 
-  // Bg Vid
-  &__vid-wrap{
-    z-index: 1;
-    @include bg-vid($opacity: 1, $reveal-amount: 0.43);
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   z-index: 5;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   background-color: $color-dark;
+    //   animation: home-mast-bg-fade-sm 4s ease-in-out both;
+    //
+    //   @media (min-width: $mq-med) {
+    //     animation: home-mast-bg-fade-lg 7s ease-in-out both;
+    //   }
+    // }
+
+    .is-loaded & {
+      opacity: 0.3;
+    }
     @media (min-width: $mq-med) {
-      @include bg-vid($opacity: 1, $reveal-amount: 0.69);
+      background-position: left;
+      background-size: 75em;
+
+      .is-loaded & {
+        opacity: 0.6;
+      }
     }
   }
 
-  // __grid & __col for 2 cols layout
   &__grid{
     z-index: 4;
     position: relative;
     @include flex-row($align:center);
   }
 
-  // Columns
-  // &__col{
-  //   //@include flex-col(50%);
-  // }
-
   // For Single Col Layout
   &__content{
     z-index: 4;
     position: relative;
-    margin: 0 auto;
-
-
-    @media (min-width: $mq-small) {
-      margin-left: 15%;
-    }
+    margin-top: 10%;
 
     @media (min-width: $mq-med) {
-      max-width: 70%;
       margin-left: $h-mast-margin-left-med;
     }
-
     @media (min-width: $mq-large){
       margin-left: $h-mast-margin-left-lg;
     }
-
     @media (min-width: $mq-xlarge){
       margin-left: $h-mast-margin-left-xl;
     }
@@ -77,17 +89,20 @@
   &__header{
     z-index: 3;
     position: relative;
+
+    @media (min-width: $mq-med) {
+      max-width: 50em;
+      width: 90%;
+    }
   }
 
   &__title{
-    //max-width: 8em;
-    @extend %font-title-caps;
-    @include font-rwd(2.5em, 3em, 3em, 3.25em, 3.5em);
+    @include font-rwd(1.5em, 1.75em, 2em, 2.15em);
+    line-height: 1.55;
     margin: 0;
 
     .js-letters span{
       min-width: 1em;
-      //opacity: 0;
       display: inline-block;
 
       @media (min-width: $mq-med){
@@ -99,52 +114,27 @@
       margin-bottom: 0.05em;
     }
   }
-
-  &__text{
-    font-size: 1.1em;
-    font-family: $font-sans;
-    font-size: $font-small;
-    max-width: 34em;
-
-    @media (min-width: $mq-med) {
-      max-width: 40em;
-    }
-  }
-
-  &__sep{
-    position: relative;
-    border: 0;
-    height: 0.2em;
-    width: 0;
-    margin: 1em 0 2em;
-    background-color: #fff;
-
-    .is-loaded &{
-      width: 6em;
-      transition: 0.5s 1s $ease-cb-2;
-    }
-  }
-
-  &__figure{
-    z-index: 0;
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30em;
-    height: 27em;
-    background-color: $color-black;
-    background-position: 50%;
-    background-position: no-repeat;
-  }
 }
 
-@keyframes home-mast-bg-fade{
+
+
+
+@keyframes home-mast-bg-fade-sm {
   0%{
-    opacity: 0;
+    opacity: 1;
   }
 
   100%{
-    opacity: 0.6;
+    opacity: 0.3;
+  }
+}
+
+@keyframes home-mast-bg-fade-lg {
+  0%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0.4;
   }
 }

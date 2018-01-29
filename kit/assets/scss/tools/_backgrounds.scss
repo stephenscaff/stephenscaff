@@ -1,11 +1,11 @@
 //----------------------------------------------
 //  bg-img-cover()
-//  Setup for 
+//  Setup for
 //----------------------------------------------
 @mixin bg-img($bg_size: cover, $bg_position: 50%){
   background-position: $bg_position;
   background-repeat: no-repeat;
-  background-size: $bg_size;  
+  background-size: $bg_size;
 }
 
 //----------------------------------------------
@@ -13,8 +13,8 @@
 //  Absolutely positioned bg element
 //  @requires (mixin) bg-img();
 //----------------------------------------------
-@mixin bg-img-abs {
-  z-index: 0;
+@mixin bg-img-abs ($z:0) {
+  z-index: $z;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -26,7 +26,7 @@
 
 //----------------------------------------------
 //  bg-overlay()
-//  Pseduo overlay element  
+//  Pseduo overlay element
 //  @param: $bg_hex: [$color-dark] - hex value for rgba conversion
 //  @param: $bg_opacity:[0.6] - alpha transparency level
 //  @param: $top_layer: element or class name for higher z-index layer

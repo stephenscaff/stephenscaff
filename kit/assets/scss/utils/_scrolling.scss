@@ -8,7 +8,7 @@
 //  @see   js/vendor/waypoints.js
 //  @see   js/component/scroll-animations.js
 //----------------------------------------------
-[data-scroll-seq="li"], 
+[data-scroll-seq="li"],
 [data-scroll-seq="article"]{
   will-change: opacity;
 
@@ -30,7 +30,7 @@
 //  @see   js/vendor/waypoints.js
 //  @see   js/component/scroll-animations.js
 //----------------------------------------------
-[data-scroll="stagger-in-slow"], 
+[data-scroll="stagger-in-slow"],
 [data-load="stagger-in-slow"]{
  will-change: opacity, transform;
 
@@ -38,9 +38,9 @@
     display: inline-block;
     opacity: 0;
     transition: opacity 1s ease;
-    @include nth-trans-delay(30,0.135s);
+    @include nth-trans-delay(30,0.115s);
   }
-  &.is-animated .oh  span, 
+  &.is-animated .oh  span,
   body.is-loaded & .oh  span{
     opacity: 1;
   }
@@ -69,7 +69,7 @@
 //  @see   js/vendor/waypoints.js
 //  @see   js/component/scroll-animations.js
 //----------------------------------------------
-[data-scroll="stagger-in-fast"], 
+[data-scroll="stagger-in-fast"],
 [data-load="stagger-in-fast"]{
  will-change: opacity, transform;
 
@@ -79,7 +79,7 @@
     transition: opacity 1s ease;
     @include nth-trans-delay(50,0.06s);
   }
-  &.is-animated .oh  span, 
+  &.is-animated .oh  span,
   body.is-loaded & .oh  span{
     opacity: 1;
   }

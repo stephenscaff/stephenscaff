@@ -649,6 +649,14 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/assets\/images\/home\/home-mast-skull.gif": {
+		"ft": 4194304,
+		"iS": 901170,
+		"oA": 0,
+		"oAP": "\/assets\/images\/home\/home-mast-skull.gif",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/assets\/images\/home\/vid-bg-1.gif": {
 		"ft": 4194304,
 		"iS": 0,
@@ -4301,6 +4309,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/partials\/partial-home-mast-element.php",
+		"oF": 0
+		},
+	"\/partials\/partial-home-mast-v1.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/partial-home-mast-v1.php",
 		"oF": 0
 		},
 	"\/partials\/partial-home-mast.php": {

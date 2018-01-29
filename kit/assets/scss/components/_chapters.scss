@@ -4,7 +4,7 @@
 //-----------------------------------------------
 
 // Pseudo Border ELement
-@mixin pseudo-border($width: 100%, $color:$color-light){
+@mixin pseudo-border($width: 100%, $color:rgba(255,255,255,0.2)){
   position: relative;
 
   &:after{
@@ -43,9 +43,10 @@
     position: relative;
     opacity: 0.5;
     @include flex-col(30%);
-
-    @media (min-width: $mq-med) and (max-width: $mq-large){
+    @media (min-width: $mq-med) {
       @include pseudo-border($width:3em);
+    }
+    @media (min-width: $mq-med) and (max-width: $mq-large){
       left: -1.15%;
       @include flex-col($h-mast-margin-left-med);
     }
@@ -70,7 +71,7 @@
     }
 
     @media (min-width: $mq-large) {
-      //margin-left: ;
+      max-width: 58em;
     }
   }
 

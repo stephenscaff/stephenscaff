@@ -8,7 +8,6 @@
 // @codekit-append "vendor/_feature.js"
 // @codekit-append "vendor/_waypoints.js"
 // @codekit-append "vendor/_unveil.js"
-// @codekit-append "vendor/_inline-video.js"
 
 
 /** Components **/

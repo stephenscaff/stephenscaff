@@ -11,7 +11,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $post ; 
+global $post ;
 
 $args = array(
   'post_type' => 'post',
@@ -26,7 +26,7 @@ $posts = get_posts( $args );
 if ($posts) : ?>
 
 <section class="posts-promo has-greyscale">
-  <div class="grid-lg">
+  <div class="grid-xl">
     <div class="posts-promo__grid">
       <header class="posts-promo__header">
         <h2 class="posts-promo__title">Articles</h2>

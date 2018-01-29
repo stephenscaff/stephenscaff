@@ -19,15 +19,15 @@ $dribbble = get_field('dribbble', 'option');
   <?php if (!wp_is_mobile()) : ?>
   <!-- Bgs -->
   <div class="work-promo__bgs">
-    <?php 
+    <?php
     $args = array(
       'post_type'        => 'work',
       'posts_per_page'   => -1,
     );
 
     $promo_bgs = get_posts ($args);
-    
-    foreach ( $promo_bgs as $post ) : setup_postdata( $post ); 
+
+    foreach ( $promo_bgs as $post ) : setup_postdata( $post );
       $promo_img = get_field('promo_image');
       $ft_video = get_field('featured_video');
 
@@ -39,16 +39,15 @@ $dribbble = get_field('dribbble', 'option');
       </figure>
     <?php elseif ($promo_img && !wp_is_mobile()) : ?>
     <figure class="work-promo__bg js-promo-bg" style="background-image: url(<?php echo $promo_img['url']; ?>)"></figure>
-    <?php 
-    endif; 
-    endforeach; 
+    <?php
+    endif;
+    endforeach;
     ?>
   </div>
     <?php endif; ?>
 
-  <div class="grid-lg">
+  <div class="grid-xl">
     <div class="work-promo__grid">
-      <!-- Header -->
       <header class="work-promo__header">
         <h3 class="work-promo__title">Select Work</h3>
       </header>
@@ -57,7 +56,7 @@ $dribbble = get_field('dribbble', 'option');
         <!-- Case Studies -->
         <h3 class="work-promo__heading">Case Studies</h3>
         <div class="work-promo__items js-scroll" data-scroll-seq="article" data-scroll-offset="90%">
-        <?php 
+        <?php
         $args = array(
           'post_type'        => 'work',
           'posts_per_page'   => -1,
@@ -65,7 +64,7 @@ $dribbble = get_field('dribbble', 'option');
         //$count = 0;
         $promo_contents = get_posts ($args);
 
-        foreach ( $promo_contents as $post ) : setup_postdata( $post ); 
+        foreach ( $promo_contents as $post ) : setup_postdata( $post );
           //$count++;
           $promo_img = get_field('promo_image');
           $ft_video = get_field('featured_video');
@@ -75,14 +74,14 @@ $dribbble = get_field('dribbble', 'option');
               <span class="work-promo__name oh"><span class="js-letters"><?php the_title(); ?></span></span>
             </a>
           </article>
-        <?php 
+        <?php
         endforeach;
         ?>
         </div>
-        
+
         <!-- Socials -->
         <h3 class="work-promo__heading" data-scroll="">Socials</h3>
-        
+
         <div class="work-promo__items work-promo__items--social js-scroll" data-scroll-seq="article" data-scroll-offset="90%">
           <article class="work-promo__item js-article-link">
             <a class="work-promo__link" href="<?php echo $github; ?>"><span class="work-promo__name oh"><span class="js-letters">Github</span></span></a>
