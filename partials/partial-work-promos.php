@@ -1,4 +1,4 @@
-  <?php
+<?php
 /**
  * Partial: Work Promors
  *
@@ -13,6 +13,8 @@ $facebook = get_field('facebook', 'option');
 $linkedin = get_field('linkedin', 'option');
 $instagram = get_field('instagram', 'option');
 $dribbble = get_field('dribbble', 'option');
+$github = get_field('github', 'option');
+$codepen = get_field('codepen', 'option');
 ?>
 
 <section id="work" class="work-promo js-promo">

@@ -46,7 +46,7 @@ pre[class*="language-"],
   @media (max-width: $mq-med) {
     width: calc(100% + 20%);
     margin: 3em -10%;
-    padding: 2% 2% 10%;
+    padding: 2% 2%;
     border-radius: 0;
   }
   &::-webkit-scrollbar {
